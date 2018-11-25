@@ -105,3 +105,4 @@ venv.bak/
 
 #Wav samples
 samples/
+data/
