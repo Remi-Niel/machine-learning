@@ -13,7 +13,7 @@ import numpy
 def SamplesFromFile(file_name):
     (sample_rate, signal) = wavfile.read(file_name)
     signal_length = len(signal)
-    for j in range(1000):    #randomly select 100 samples from file
+    for j in range(10000):    #randomly select 10000 samples from file
         start = random.randint(0, signal_length-24000 - 1) #select random point
         sample = signal[start : (start + 24000)]
         name = "data/"+ labels[x]+"/"+str(i * 1000 + j)+".npy"
@@ -50,7 +50,7 @@ for x in range(NUM_LABELS):
     NUM_DATAFILES = len(sample_files)
     print("Creating " + labels[x] +" samples")
     bar = progressbar.ProgressBar(max_value=100000);
-    for i in range(100): #randomly select 1000 files
+    for i in range(10): #randomly select 10 files
         file_name = sample_files[random.randint(0,NUM_DATAFILES - 1)]
         SamplesFromFile(file_name);
 
