@@ -52,7 +52,7 @@ for x in range(NUM_LABELS):
     for i in range(10): #randomly select 10 files
         file_name = sample_files[random.randint(0,NUM_DATAFILES - 1)]
         SamplesFromFile(file_name,i);
-        bar.update(i)
+        bar.update(i+1)
 
 data_files = glob.glob("data/**/*.npy", recursive = True); #get filepaths
 
