@@ -16,7 +16,7 @@ def SamplesFromFile(file_name):
     for j in range(10000):    #randomly select 10000 samples from file
         start = random.randint(0, signal_length-24000 - 1) #select random point
         sample = signal[start : (start + 24000)]
-        name = "data/"+ labels[x]+"/"+str(i * 1000 + j)+".npy"
+        name = "data/"+ labels[x]+"/"+str(i * 10000 + j)+".npy"
         with open(name,'wb') as f:
             numpy.save(f, sample)
         bar.update(i * 1000 + j)
