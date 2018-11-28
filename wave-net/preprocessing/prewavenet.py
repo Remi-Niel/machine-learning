@@ -16,7 +16,7 @@ def SamplesFromFile(file_name):
     for j in range(1000):    #randomly select 100 samples from file
         start = random.randint(0, signal_length-24000 - 1) #select random point
         sample = signal[start : (start + 24000)]
-        name = "data/"+ labels[x]+"/"+str(i * 10000 + j)+".npy"
+        name = "data/"+ labels[x]+"/"+str(i * 1000 + j)+".npy"
         with open(name,'wb') as f:
             numpy.save(f, sample)
         bar.update(i * 1000 + j)
@@ -49,8 +49,8 @@ for x in range(NUM_LABELS):
     sample_files = glob.glob(directory+'/'+labels[x]+'/*.wav',recursive=True)
     NUM_DATAFILES = len(sample_files)
     print("Creating " + labels[x] +" samples")
-    bar = progressbar.ProgressBar(max_value=10000);
-    for i in range(10): #randomly select 1000 files
+    bar = progressbar.ProgressBar(max_value=100000);
+    for i in range(100): #randomly select 1000 files
         file_name = sample_files[random.randint(0,NUM_DATAFILES - 1)]
         SamplesFromFile(file_name);
 
