@@ -10,7 +10,7 @@ import numpy
 #Make sure you do this in a different function
 #That way python garbage collection makes sure the large numpy array
 #is deleted after this function is done reducing memory usage
-def SamplesFromFile(file_name, i):
+def SamplesFromFile(file_name,i):
     (sample_rate, signal) = wavfile.read(file_name)
     signal_length = len(signal)
     for j in range(10000):    #randomly select 10000 samples from file
@@ -19,7 +19,6 @@ def SamplesFromFile(file_name, i):
         name = "data/"+ labels[x]+"/"+str(i * 10000 + j)+".npy"
         with open(name,'wb') as f:
             numpy.save(f, sample)
-        bar.update(i * 1000 + j)
     return 
 
 def one_hot(label_array,num_classes):
@@ -49,10 +48,11 @@ for x in range(NUM_LABELS):
     sample_files = glob.glob(directory+'/'+labels[x]+'/*.wav',recursive=True)
     NUM_DATAFILES = len(sample_files)
     print("Creating " + labels[x] +" samples")
-    bar = progressbar.ProgressBar(max_value=100000);
+    bar = progressbar.ProgressBar(max_value=10);
     for i in range(10): #randomly select 10 files
         file_name = sample_files[random.randint(0,NUM_DATAFILES - 1)]
         SamplesFromFile(file_name,i);
+        bar.update(i)
 
 data_files = glob.glob("data/**/*.npy", recursive = True); #get filepaths
 
