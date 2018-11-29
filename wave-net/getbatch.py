@@ -55,7 +55,7 @@ def getBatch(size = 100, train = True):
 	
 	labels = np.array(labels)
 
-	return (data,labels)
+	return (data,one_hot(labels,NUM_LABELS))
 
 #print(getBatch(1000,False))
 

@@ -28,7 +28,7 @@ model_m.add(Conv1D(200, 2, strides = 2, activation='relu'))
 model_m.add(Conv1D(500, 2, strides = 2, activation='relu'))
 model_m.add(GlobalAveragePooling1D())
 model_m.add(Dropout(0.5))
-model_m.add(Dense(num_classes, activation='softmax'))
+model_m.add(Dense(1, activation='softmax'))
 print(model_m.summary())
 
 # %%
@@ -44,7 +44,7 @@ callbacks_list = [
         monitor='val_loss', save_best_only=True)
 ]
 
-model_m.compile(loss='categorical_crossentropy',
+model_m.compile(loss='binary_crossentropy',
                 optimizer='adam', metrics=['accuracy'])
 
 # Hyper-parameters
@@ -57,7 +57,7 @@ for i in range(1):
     x_train = x_train.astype("float32") / 32768
     
     y_train = y_train.astype("float32")
-    y_train = np_utils.to_categorical(y_train,num_classes)
+    y_train = y_train[:,2]
     history = model_m.fit(x_train,
                         y_train,
                         epochs=EPOCHS,
@@ -73,7 +73,7 @@ print("\n--- Check against test data ---\n")
 x_test = x_test.astype("float32") / 32768
 
 y_test = y_test.astype("float32")
-y_test = np_utils.to_categorical(y_test,num_classes)
+y_train = y_train[:,2]
 
 score = model_m.evaluate(x_test, y_test, verbose=1)
 
