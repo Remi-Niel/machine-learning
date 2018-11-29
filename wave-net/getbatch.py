@@ -40,6 +40,8 @@ def getBatch(size = 80, train = True):
 
 
 	sample_files = glob.glob(directory+'/*/*.wav',recursive=True)
+	shuffle(sample_files);
+
 	NUM_DATAFILES = len(sample_files)
 
 	for i in range(size):
