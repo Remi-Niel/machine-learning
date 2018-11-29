@@ -31,7 +31,7 @@ def getBatch(size = 100):
 
 	for i in range(100):
 		file_name = sample_files[random.randint(0,NUM_DATAFILES - 1)]
-		data[i,:] = wavfile.read(file_name);
+		(sample_rate, data[i,:]) = wavfile.read(file_name);
 		labels.append(label_indexes[file_name.split('/')[1]]);
 
 
