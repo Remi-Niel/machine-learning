@@ -26,15 +26,15 @@ def getBatch(size = 100):
 
 
 
-    sample_files = glob.glob(directory+'/*/*.wav',recursive=True)
+	sample_files = glob.glob(directory+'/*/*.wav',recursive=True)
 
 	for i in range(100):
-        file_name = sample_files[random.randint(0,NUM_DATAFILES - 1)]
+		file_name = sample_files[random.randint(0,NUM_DATAFILES - 1)]
 		data[i,:] = wavfile.read(file_name);
-    	labels.append(label_indexes[file.split('/')[1]]);
+		labels.append(label_indexes[file.split('/')[1]]);
 
 
-    return (data,one_hot(labels,NUM_LABELS))
+	return (data,one_hot(labels,NUM_LABELS))
 
 print getBatch(2)[1];
 
