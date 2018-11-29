@@ -49,16 +49,16 @@ model_m.compile(loss='categorical_crossentropy',
                 optimizer='adam', metrics=['accuracy'])
 
 # Hyper-parameters
-BATCH_SIZE = 1000
+BATCH_SIZE = 80
 EPOCHS = 50
 
 # Enable validation to use ModelCheckpoint and EarlyStopping callbacks.
 for i in range(1):
-    (x_train, y_train) = getbatch.getBatch(10000,True)
+    (x_train, y_train) = getbatch.getBatch(1000,True)
+    x_train = x_train.astype("float32") / 32768
     history = model_m.fit(x_train,
                         y_train,
                         epochs=EPOCHS,
-                        batch_size=BATCH_SIZE,
                         callbacks=callbacks_list,
                         validation_split=0.2,
                         verbose=1)
@@ -68,12 +68,10 @@ print("\n--- Check against test data ---\n")
 (x_test, y_test) = getbatch.getBatch(100,False)
 
 # Set input_shape / reshape for Keras
-x_test = x_test.reshape(x_test.shape[0], input_shape)
-
 x_test = x_test.astype("float32") / 32768
 y_test = y_test.astype("float32")
 
-y_test = np_utils.to_categorical(y_test, num_classes)
+# y_test = np_utils.to_categorical(y_test, num_classes)
 
 score = model_m.evaluate(x_test, y_test, verbose=1)
 
