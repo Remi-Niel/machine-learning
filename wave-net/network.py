@@ -61,8 +61,8 @@ print("\n--- Check against test data ---\n")
 
 score = model_m.evaluate(x_test, y_test, verbose=1)
 
-print("\nAccuracy on test data: %0.2f" % score[1])
-print("\nLoss on test data: %0.2f" % score[0])
+print("\nAccuracy on test data: %0.4f" % score[1])
+print("\nLoss on test data: %0.4f" % score[0])
 
 # %%
 
