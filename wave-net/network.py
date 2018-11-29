@@ -43,7 +43,7 @@ print("\n--- Fit the model ---\n")
 # ]
 
 model_m.compile(loss='mean_squared_error',
-                optimizer='adam', metrics=['accuracy'])
+                optimizer=keras.optimizers.Adadelta(), metrics=['accuracy'])
 
 # Hyper-parameters
 BATCH_SIZE = 1000
