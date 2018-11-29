@@ -45,7 +45,7 @@ print("\n--- Fit the model ---\n")
 opt = SGD(lr=0.01)
 
 model_m.compile(loss='categorical_crossentropy',
-                optimizer=opt, metrics=['accuracy'])
+                optimizer='Adam', metrics=['accuracy'])
 
 # Hyper-parameters
 BATCH_SIZE = 1000
