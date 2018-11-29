@@ -58,7 +58,7 @@ def getBatch(size = 40, train = True):
 	return (data,one_hot(labels,NUM_LABELS))
 
 def generator(n):
-	while True:
+	for idx in range(n):
 		(x,y) = getBatch()
 		yield (x,y[:,2])
 		
