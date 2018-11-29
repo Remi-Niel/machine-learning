@@ -55,6 +55,7 @@ EPOCHS = 50
 for i in range(1):
     (x_train, y_train) = getbatch.getBatch(1,True)
     print(x_train.shape);
+    print(y_train);
     print(y_train.shape);
     x_train = x_train.astype("float32") / 32768
     y_train = y_train.astype("float32")
