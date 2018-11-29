@@ -48,15 +48,12 @@ model_m.compile(loss='binary_crossentropy',
                 optimizer='adam', metrics=['accuracy'])
 
 # Hyper-parameters
-BATCH_SIZE = 80
+BATCH_SIZE = 50
 EPOCHS = 50
 
 # Enable validation to use ModelCheckpoint and EarlyStopping callbacks.
-for i in range(1):
-    (x_train, y_train) = getbatch.getBatch(2,True)
-    print(x_train.shape);
-    print(y_train);
-    print(y_train.shape);
+for i in range(EPOCHS):
+    (x_train, y_train) = getbatch.getBatch(BATCH_SIZE,True)
     x_train = x_train.astype("float32") / 32768
     y_train = y_train.astype("float32")
     y_train = y_train[:,2]
@@ -64,7 +61,7 @@ for i in range(1):
 
 print("\n--- Check against test data ---\n")
 
-(x_test, y_test) = getbatch.getBatch(2,False)
+(x_test, y_test) = getbatch.getBatch(BATCH_SIZE,False)
 
 # Set input_shape / reshape for Keras
 x_test = x_test.astype("float32") / 32768
