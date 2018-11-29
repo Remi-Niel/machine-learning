@@ -70,10 +70,7 @@ print("\n--- Check against test data ---\n")
 # Set input_shape / reshape for Keras
 x_test = x_test.astype("float32") / 32768
 
-
 y_test = y_test.astype("float32")
-
-y_test = np_utils.to_categorical(y_test, num_classes)
 
 score = model_m.evaluate(x_test, y_test, verbose=1)
 
