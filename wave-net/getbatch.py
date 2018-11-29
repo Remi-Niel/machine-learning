@@ -8,7 +8,7 @@ import progressbar
 import numpy as np
 
 def one_hot(label_array,num_classes):
-    return numpy.squeeze(numpy.eye(num_classes)[label_array.reshape(-1)])
+    return np.squeeze(np.eye(num_classes)[label_array.reshape(-1)])
 
 def getBatch(size = 100):
 	directory = 'samples/'
@@ -27,11 +27,12 @@ def getBatch(size = 100):
 
 
 	sample_files = glob.glob(directory+'/*/*.wav',recursive=True)
+    NUM_DATAFILES = len(sample_files)
 
 	for i in range(100):
 		file_name = sample_files[random.randint(0,NUM_DATAFILES - 1)]
 		data[i,:] = wavfile.read(file_name);
-		labels.append(label_indexes[file.split('/')[1]]);
+		labels.append(label_indexes[file_name.split('/')[1]]);
 
 
 	return (data,one_hot(labels,NUM_LABELS))
