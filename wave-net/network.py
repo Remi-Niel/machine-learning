@@ -46,8 +46,8 @@ model_m.compile(loss='binary_crossentropy',
                 optimizer='adam', metrics=['accuracy'])
 
 # Hyper-parameters
-BATCH_SIZE = 40
-EPOCHS = 0
+BATCH_SIZE = 1000
+EPOCHS = 100
 
 # Enable validation to use ModelCheckpoint and EarlyStopping callbacks.
 for i in range(EPOCHS):
@@ -55,15 +55,7 @@ for i in range(EPOCHS):
     x_train = x_train.astype("float32")
     y_train = y_train.astype("float32")
     y_train = y_train[:,2]
-    res = model_m.train_on_batch(x_train,y_train)
-    print(res);
-
-    (x_train, y_train) = getbatch.getBatch(BATCH_SIZE,True)
-    x_train = x_train.astype("float32")
-    y_train = y_train.astype("float32")
-    y_train = y_train[:,2]
-    res = model_m.test_on_batch(x_train,y_train)
-    print(res)
+    res = model_m.fit(x_train,y_train,epochs=EPOCHS,callbacks=callbacks_list,validation_split=0.2,verbose=1)
 
 print("\n--- Check against test data ---\n")
 
