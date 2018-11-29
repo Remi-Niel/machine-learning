@@ -34,7 +34,7 @@ def getBatch(size = 40, train = True):
 	label_indexes = {labels[i]: i for i in range(0,NUM_LABELS)} #testing labels
 	#print(label_indexes)
 
-	data = np.zeros((size,44100 * 3-1))
+	data = np.zeros((size,44100))
 	labels = []
 
 
@@ -49,7 +49,7 @@ def getBatch(size = 40, train = True):
 
 		mono = signal.sum(axis=1) / 2
 
-		data[i,:] = mono
+		data[i,:] = mono[0:44100]
 
 		labels.append(label_indexes[file_name.split('/')[1]])
 	

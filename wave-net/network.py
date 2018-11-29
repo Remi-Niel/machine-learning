@@ -11,7 +11,7 @@ import getbatch
 
 num_classes = getbatch.num_class()
 
-TIME_PERIODS = 3* 44100 -1
+TIME_PERIODS = 44100
 num_sensors = 1
 input_shape = (TIME_PERIODS*num_sensors)
 
