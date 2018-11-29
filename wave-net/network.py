@@ -49,7 +49,7 @@ model_m.compile(loss='categorical_crossentropy',
 BATCH_SIZE = 10000
 EPOCHS = 100
 
-res = model_m.fit_generator(getbatch.generator(EPOCHS*10), epochs=EPOCHS, verbose=1,callback=callbacks_list, steps_per_epoch = 10)
+res = model_m.fit_generator(getbatch.generator(EPOCHS*10), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = 10)
 
 print("\n--- Check against test data ---\n")
 
