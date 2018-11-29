@@ -60,7 +60,7 @@ def getBatch(size = 100, train = True):
 def generator(n):
 	for idx in range(n):
 		(x,y) = getBatch()
-		yield (x,y[:,2])
+		yield (x,y)
 		
 
 #print(getBatch(1000,False))

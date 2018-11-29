@@ -26,7 +26,7 @@ model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
 model_m.add(Flatten())
 model_m.add(Dense(500))
 model_m.add(Dropout(0.5))
-model_m.add(Dense(1, activation='softmax'))
+model_m.add(Dense(num_classes, activation='softmax'))
 print(model_m.summary())
 
 # %%
@@ -56,7 +56,6 @@ print("\n--- Check against test data ---\n")
 (x_test, y_test) = getbatch.getBatch(BATCH_SIZE,False)
 
 # Set input_shape / reshape for Keras
-y_test = y_test[:,2]
 
 score = model_m.evaluate(x_test, y_test, verbose=1)
 
