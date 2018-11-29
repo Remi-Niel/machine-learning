@@ -56,9 +56,11 @@ EPOCHS = 50
 for i in range(1):
     (x_train, y_train) = getbatch.getBatch(1000,True)
     x_train = x_train.astype("float32") / 32768
+    y_test = y_test.astype("float32")
+    y_train = np_utils.to_categorical(y_train,num_classes)
     history = model_m.fit(x_train,
                         y_train,
-                        nb_epoch=EPOCHS,
+                        epochs=EPOCHS,
                         callbacks=callbacks_list,
                         validation_split=0.2,
                         verbose=1)
@@ -71,6 +73,7 @@ print("\n--- Check against test data ---\n")
 x_test = x_test.astype("float32") / 32768
 
 y_test = y_test.astype("float32")
+y_test = np_utils.to_categorical(y_test,num_classes)
 
 score = model_m.evaluate(x_test, y_test, verbose=1)
 
