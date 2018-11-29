@@ -53,7 +53,7 @@ EPOCHS = 50
 
 # Enable validation to use ModelCheckpoint and EarlyStopping callbacks.
 for i in range(1):
-    (x_train, y_train) = getbatch.getBatch(1,True)
+    (x_train, y_train) = getbatch.getBatch(2,True)
     print(x_train.shape);
     print(y_train);
     print(y_train.shape);
