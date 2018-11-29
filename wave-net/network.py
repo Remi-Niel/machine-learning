@@ -2,6 +2,7 @@
 import numpy as np
 
 import keras
+from keras.optimizers import SGD
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten, Reshape, GlobalAveragePooling1D
 from keras.layers import Conv2D, MaxPooling2D, Conv1D, MaxPooling1D, Flatten
@@ -45,8 +46,10 @@ print("\n--- Fit the model ---\n")
 #         monitor='val_loss', save_best_only=True)
 # ]
 
+opt = SGD(lr=0.01)
+
 model_m.compile(loss='categorical_crossentropy',
-                optimizer=keras.optimizers.Adadelta(), metrics=['accuracy'])
+                optimizer=opt, metrics=['accuracy'])
 
 # Hyper-parameters
 BATCH_SIZE = 1000
