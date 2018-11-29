@@ -81,11 +81,6 @@ print("\nLoss on test data: %0.2f" % score[0])
 
 print("\n--- Confusion matrix for test data ---\n")
 
-y_pred_test = model_m.predict(x_test)
-# Take the class with the highest probability from the test predictions
-max_y_pred_test = np.argmax(y_pred_test, axis=1)
-max_y_test = np.argmax(y_test, axis=1)
-
 # %%
 
 print("\n--- Classification report for test data ---\n")
