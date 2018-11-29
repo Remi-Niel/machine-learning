@@ -56,9 +56,6 @@ print("\n--- Check against test data ---\n")
 (x_test, y_test) = getbatch.getBatch(BATCH_SIZE,False)
 
 # Set input_shape / reshape for Keras
-x_test = x_test.astype("float32")
-
-y_test = y_test.astype("float32")
 y_test = y_test[:,2]
 
 score = model_m.evaluate(x_test, y_test, verbose=1)
