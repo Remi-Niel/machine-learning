@@ -63,7 +63,7 @@ for i in range(1):
 
 print("\n--- Check against test data ---\n")
 
-(x_test, y_test) = getbatch.getBatch(100,False)
+(x_test, y_test) = getbatch.getBatch(1,False)
 
 # Set input_shape / reshape for Keras
 x_test = x_test.astype("float32") / 32768
