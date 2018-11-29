@@ -36,5 +36,5 @@ def getBatch(size = 100):
 
 	return (data,one_hot(labels,NUM_LABELS))
 
-print getBatch(2)[1];
+print(getBatch(2)[1]);
 
