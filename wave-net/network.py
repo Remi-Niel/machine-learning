@@ -37,7 +37,7 @@ print("\n--- Fit the model ---\n")
 # if it fails to improve for two consecutive epochs,
 # training stops early
 callbacks_list = [
-    keras.callbacks.EarlyStopping(monitor='acc', patience=1)
+    keras.callbacks.EarlyStopping(monitor='acc', patience=5)
 ]
 
 model_m.compile(loss='categorical_crossentropy',
