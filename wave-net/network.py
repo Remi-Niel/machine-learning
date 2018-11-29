@@ -70,7 +70,7 @@ print("\n--- Check against test data ---\n")
 x_test = x_test.astype("float32") / 32768
 
 y_test = y_test.astype("float32")
-y_train = y_train[:,2]
+y_test = y_test[:,2]
 
 score = model_m.evaluate(x_test, y_test, verbose=1)
 
