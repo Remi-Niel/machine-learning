@@ -4,7 +4,7 @@ import numpy as np
 import keras
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten, Reshape, GlobalAveragePooling1D
-from keras.layers import Conv2D, MaxPooling2D, Conv1D, MaxPooling1D
+from keras.layers import Conv2D, MaxPooling2D, Conv1D, MaxPooling1D, Flatten
 from keras.utils import np_utils
 
 import getbatch
@@ -23,7 +23,7 @@ model_m.add(Conv1D(32, 2, strides = 2, activation='relu'))
 model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
 model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
 model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
-model_m.add(flatten())
+model_m.add(Flatten())
 model_m.add(Dense(500))
 model_m.add(Dropout(0.5))
 model_m.add(Dense(1, activation='softmax'))
