@@ -57,8 +57,8 @@ for i in range(1):
     x_train = x_train.astype("float32") / 32768
     y_train = y_train.astype("float32")
     y_train = y_train[:,2]
-    print(x_train);
-    print(y_train);
+    print(x_train.shape);
+    print(y_train.shape);
     history = model_m.train_on_batch(x_train,y_train)
 
 print("\n--- Check against test data ---\n")
