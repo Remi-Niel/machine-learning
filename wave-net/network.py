@@ -49,13 +49,7 @@ model_m.compile(loss='binary_crossentropy',
 BATCH_SIZE = 1000
 EPOCHS = 100
 
-# Enable validation to use ModelCheckpoint and EarlyStopping callbacks.
-for i in range(EPOCHS):
-    (x_train, y_train) = getbatch.getBatch(BATCH_SIZE,True)
-    x_train = x_train.astype("float32")
-    y_train = y_train.astype("float32")
-    y_train = y_train[:,2]
-    res = model_m.fit(x_train,y_train,epochs=EPOCHS,callbacks=callbacks_list,validation_split=0.2,verbose=1)
+res = model_m.fit_generator(getbatch.getBatch, epochs=EPOCHS, verbose=1, callbacks=callbacks_list)
 
 print("\n--- Check against test data ---\n")
 
