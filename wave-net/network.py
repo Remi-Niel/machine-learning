@@ -33,16 +33,14 @@ print(model_m.summary())
 
 print("\n--- Fit the model ---\n")
 
-# The EarlyStopping callback monitors training accuracy:
-# # if it fails to improve for two consecutive epochs,
-# # training stops early
-# callbacks_list = [
-#     keras.callbacks.ModelCheckpoint(
-#         filepath='best_model.{epoch:02d}-{val_loss:.2f}.h5',
-#         monitor='val_loss', save_best_only=True)
-# ]
-
-opt = SGD(lr=0.01)
+The EarlyStopping callback monitors training accuracy:
+# if it fails to improve for two consecutive epochs,
+# training stops early
+callbacks_list = [
+    keras.callbacks.ModelCheckpoint(
+        filepath='best_model.{epoch:02d}-{val_loss:.2f}.h5',
+        monitor='val_loss', save_best_only=True)
+]
 
 model_m.compile(loss='categorical_crossentropy',
                 optimizer='Adam', metrics=['accuracy'])
@@ -51,7 +49,7 @@ model_m.compile(loss='categorical_crossentropy',
 BATCH_SIZE = 10000
 EPOCHS = 100
 
-res = model_m.fit_generator(getbatch.generator(EPOCHS*10), epochs=EPOCHS, verbose=1, steps_per_epoch = 10)
+res = model_m.fit_generator(getbatch.generator(EPOCHS*10), epochs=EPOCHS, verbose=1,callback=callbacks_list, steps_per_epoch = 10)
 
 print("\n--- Check against test data ---\n")
 
