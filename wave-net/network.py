@@ -49,7 +49,7 @@ model_m.compile(loss='mean_squared_error',
 BATCH_SIZE = 1000
 EPOCHS = 100
 
-res = model_m.fit_generator(getbatch.generator(EPOCHS), epochs=EPOCHS, verbose=1, steps_per_epoch = 10)
+res = model_m.fit_generator(getbatch.generator(EPOCHS*10), epochs=EPOCHS, verbose=1, steps_per_epoch = 10)
 
 print("\n--- Check against test data ---\n")
 
