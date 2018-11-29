@@ -7,11 +7,24 @@ import time
 import progressbar
 import numpy as np
 
+directory = 'data/'
+
+def num_class():
+	labels = [x[1] for x in os.walk(directory)][0] #['piano','violin']
+
+	NUM_LABELS = len(labels)
+	
+	return NUM_LABELS
+
 def one_hot(label_array,num_classes):
     return np.squeeze(np.eye(num_classes)[label_array.reshape(-1)])
 
-def getBatch(size = 100):
-	directory = 'data/'
+def getBatch(size = 100, train = True):
+	start = 0
+	end = 0.8
+	if not train:
+		start = 0.8
+		end = 1
 
 	labels = [x[1] for x in os.walk(directory)][0] #['piano','violin']
 
@@ -30,17 +43,19 @@ def getBatch(size = 100):
 	NUM_DATAFILES = len(sample_files)
 
 	for i in range(100):
-		file_name = sample_files[random.randint(0,NUM_DATAFILES - 1)]
-		(sample_rate, signal) = wavfile.read(file_name);
+		file_name = sample_files[random.randint(start * NUM_DATAFILES, end * NUM_DATAFILES - 1)]
+		(sample_rate, signal) = wavfile.read(file_name)
+		del sample_rate
+
 		mono = signal.sum(axis=1) / 2
 
 		data[i,:] = mono
 
-		labels.append(label_indexes[file_name.split('/')[1]]);
+		labels.append(label_indexes[file_name.split('/')[1]])
 	
-	labels = np.array(labels);
+	labels = np.array(labels)
 
 	return (data,one_hot(labels,NUM_LABELS))
 
-print(getBatch(1000));
+#print(getBatch(1000,False))
 
