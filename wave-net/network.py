@@ -42,7 +42,7 @@ print("\n--- Fit the model ---\n")
 #         monitor='val_loss', save_best_only=True)
 # ]
 
-model_m.compile(loss='binary_crossentropy',
+model_m.compile(loss='mean_squared_error',
                 optimizer='adam', metrics=['accuracy'])
 
 # Hyper-parameters
