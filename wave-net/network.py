@@ -58,7 +58,7 @@ for i in range(1):
     x_train = x_train.astype("float32") / 32768
     history = model_m.fit(x_train,
                         y_train,
-                        epochs=EPOCHS,
+                        nb_epoch=EPOCHS,
                         callbacks=callbacks_list,
                         validation_split=0.2,
                         verbose=1)
