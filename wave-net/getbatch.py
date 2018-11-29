@@ -10,7 +10,7 @@ import numpy as np
 def one_hot(label_array,num_classes):
     return numpy.squeeze(numpy.eye(num_classes)[label_array.reshape(-1)])
 
-def getBatch(size = 100)
+def getBatch(size = 100):
 	directory = 'samples/'
 
 	labels = [x[1] for x in os.walk(directory)][0] #['piano','violin']
