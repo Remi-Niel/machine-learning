@@ -37,9 +37,6 @@ print("\n--- Fit the model ---\n")
 # if it fails to improve for two consecutive epochs,
 # training stops early
 callbacks_list = [
-    keras.callbacks.ModelCheckpoint(
-        filepath='best_model.{epoch:02d}-{val_loss:.2f}.h5',
-        monitor='val_loss', save_best_only=True),
     keras.callbacks.EarlyStopping(monitor='acc', patience=1)
 ]
 
