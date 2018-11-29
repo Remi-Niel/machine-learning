@@ -37,7 +37,8 @@ def getBatch(size = 100):
 		data[i,:] = mono
 
 		labels.append(label_indexes[file_name.split('/')[1]]);
-
+	
+	data_labels = numpy.array(data_labels);
 
 	return (data,one_hot(labels,NUM_LABELS))
 
