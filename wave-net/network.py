@@ -42,7 +42,7 @@ print("\n--- Fit the model ---\n")
 #         monitor='val_loss', save_best_only=True)
 # ]
 
-model_m.compile(loss='mean_squared_error',
+model_m.compile(loss='categorical_crossentropy',
                 optimizer=keras.optimizers.Adadelta(), metrics=['accuracy'])
 
 # Hyper-parameters
