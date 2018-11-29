@@ -38,7 +38,7 @@ def getBatch(size = 100):
 
 		labels.append(label_indexes[file_name.split('/')[1]]);
 	
-	data_labels = np.array(data_labels);
+	labels = np.array(labels);
 
 	return (data,one_hot(labels,NUM_LABELS))
 
