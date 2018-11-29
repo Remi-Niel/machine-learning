@@ -33,7 +33,7 @@ print(model_m.summary())
 
 print("\n--- Fit the model ---\n")
 
-The EarlyStopping callback monitors training accuracy:
+# The EarlyStopping callback monitors training accuracy:
 # if it fails to improve for two consecutive epochs,
 # training stops early
 callbacks_list = [
