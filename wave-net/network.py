@@ -53,17 +53,12 @@ EPOCHS = 50
 
 # Enable validation to use ModelCheckpoint and EarlyStopping callbacks.
 for i in range(1):
-    (x_train, y_train) = getbatch.getBatch(1000,True)
+    (x_train, y_train) = getbatch.getBatch(80,True)
     x_train = x_train.astype("float32") / 32768
     
     y_train = y_train.astype("float32")
     y_train = y_train[:,2]
-    history = model_m.fit(x_train,
-                        y_train,
-                        epochs=EPOCHS,
-                        callbacks=callbacks_list,
-                        validation_split=0.2,
-                        verbose=1)
+    history = model_m.train_on_batch(x_train,y_train);
 
 print("\n--- Check against test data ---\n")
 
