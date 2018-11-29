@@ -49,6 +49,11 @@ def getBatch(size = 100, train = True):
 
 		mono = signal.sum(axis=1) / 2
 
+		mean = np.mean(mono);
+		stddev = np.std(mono);
+
+		mono = (mono - mean) / stddev;
+
 		data[i,:] = mono[0:44100]
 
 		labels.append(label_indexes[file_name.split('/')[1]])
