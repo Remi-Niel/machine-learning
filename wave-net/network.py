@@ -1,8 +1,5 @@
 # Compatibility layer between Python 2 and Python 3
 import numpy as np
-import pandas as pd
-import seaborn as sns
-from scipy import stats
 
 import keras
 from keras.models import Sequential
@@ -66,25 +63,6 @@ for i in range(EPOCHS):
                         callbacks=callbacks_list,
                         validation_split=0.2,
                         verbose=1)
-
-# %%
-
-print("\n--- Learning curve of model training ---\n")
-
-# # summarize history for accuracy and loss
-# plt.figure(figsize=(6, 4))
-# plt.plot(history.history['acc'], "g--", label="Accuracy of training data")
-# plt.plot(history.history['val_acc'], "g", label="Accuracy of validation data")
-# plt.plot(history.history['loss'], "r--", label="Loss of training data")
-# plt.plot(history.history['val_loss'], "r", label="Loss of validation data")
-# plt.title('Model Accuracy and Loss')
-# plt.ylabel('Accuracy and Loss')
-# plt.xlabel('Training Epoch')
-# plt.ylim(0)
-# plt.legend()
-# plt.show()
-
-#%%
 
 print("\n--- Check against test data ---\n")
 
