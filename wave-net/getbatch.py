@@ -27,7 +27,7 @@ def getBatch(size = 100):
 
 
 	sample_files = glob.glob(directory+'/*/*.wav',recursive=True)
-    NUM_DATAFILES = len(sample_files)
+	NUM_DATAFILES = len(sample_files)
 
 	for i in range(100):
 		file_name = sample_files[random.randint(0,NUM_DATAFILES - 1)]
