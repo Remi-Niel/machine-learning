@@ -48,7 +48,7 @@ model_m.compile(loss='categorical_crossentropy',
                 optimizer='Adam', metrics=['accuracy'])
 
 # Hyper-parameters
-BATCH_SIZE = 1000
+BATCH_SIZE = 10000
 EPOCHS = 100
 
 res = model_m.fit_generator(getbatch.generator(EPOCHS*10), epochs=EPOCHS, verbose=1, steps_per_epoch = 10)
