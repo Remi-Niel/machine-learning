@@ -49,7 +49,7 @@ model_m.compile(loss='binary_crossentropy',
 BATCH_SIZE = 1000
 EPOCHS = 100
 
-res = model_m.fit_generator(getbatch.getBatch, epochs=EPOCHS, verbose=1, callbacks=callbacks_list)
+res = model_m.fit_generator(getbatch.getBatch, epochs=EPOCHS, verbose=1, callbacks=callbacks_list, steps_per_epoch = 1)
 
 print("\n--- Check against test data ---\n")
 

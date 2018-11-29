@@ -19,7 +19,7 @@ def num_class():
 def one_hot(label_array,num_classes):
     return np.squeeze(np.eye(num_classes)[label_array.reshape(-1)])
 
-def getBatch(size = 100, train = True):
+def getBatch(size = 40, train = True):
 	start = 0
 	end = 0.8
 	if not train:
@@ -56,6 +56,12 @@ def getBatch(size = 100, train = True):
 	labels = np.array(labels)
 
 	return (data,one_hot(labels,NUM_LABELS))
+
+def generator(n):
+	while True:
+		(x,y) = getBatch()
+		yield (x,y[:,2])
+		
 
 #print(getBatch(1000,False))
 
