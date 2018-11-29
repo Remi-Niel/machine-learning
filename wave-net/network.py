@@ -26,8 +26,6 @@ model_m.add(Conv1D(200, 2, strides = 2, activation='relu'))
 model_m.add(Conv1D(200, 2, strides = 2, activation='relu'))
 model_m.add(Conv1D(200, 2, strides = 2, activation='relu'))
 model_m.add(Conv1D(500, 2, strides = 2, activation='relu'))
-model_m.add(Conv1D(500, 2, strides = 2, activation='relu'))
-model_m.add(Conv1D(500, 2, strides = 2, activation='relu'))
 model_m.add(GlobalAveragePooling1D())
 model_m.add(Dropout(0.5))
 model_m.add(Dense(num_classes, activation='softmax'))
@@ -55,11 +53,12 @@ BATCH_SIZE = 1000
 EPOCHS = 50
 
 # Enable validation to use ModelCheckpoint and EarlyStopping callbacks.
-for i in range(EPOCHS):
-    (x_train, y_train) = getbatch.getBatch(BATCH_SIZE,True)
+for i in range(1):
+    (x_train, y_train) = getbatch.getBatch(10000,True)
     history = model_m.fit(x_train,
                         y_train,
-                        epochs=1,
+                        epochs=EPOCHS,
+                        batch_size=BATCH_SIZE,
                         callbacks=callbacks_list,
                         validation_split=0.2,
                         verbose=1)
