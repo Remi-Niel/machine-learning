@@ -34,10 +34,10 @@ print(model_m.summary())
 print("\n--- Fit the model ---\n")
 
 # The EarlyStopping callback monitors training accuracy:
-# if it fails to improve for two consecutive epochs,
+# if it fails to improve for ten consecutive epochs,
 # training stops early
 callbacks_list = [
-    keras.callbacks.EarlyStopping(monitor='acc', patience=5)
+    keras.callbacks.EarlyStopping(monitor='acc', patience=10)
 ]
 
 model_m.compile(loss='categorical_crossentropy',
