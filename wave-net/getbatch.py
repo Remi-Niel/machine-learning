@@ -55,7 +55,7 @@ def getBatch(size = 150, train = True):
 
 		mono = (mono - mean) / stddev
 
-		start = random.randint(0, mono-44100 - 1)
+		start = random.randint(0, len(mono)-44100 - 1)
 		data[i,:] = mono[start:start + 44100]
 
 		labels.append(label_indexes[file_name.split('/')[1]])
