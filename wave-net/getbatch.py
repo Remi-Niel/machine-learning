@@ -40,7 +40,7 @@ def getBatch(size = 150, train = True):
 
 
 	sample_files = glob.glob(directory+'/*/*.wav',recursive=True)
-	shuffle(sample_files);
+	shuffle(sample_files)
 	NUM_DATAFILES = len(sample_files)
 
 	for i in range(size):
@@ -50,12 +50,13 @@ def getBatch(size = 150, train = True):
 
 		mono = signal.sum(axis=1) / 2
 
-		mean = np.mean(mono);
-		stddev = np.std(mono);
+		mean = np.mean(mono)
+		stddev = np.std(mono)
 
-		mono = (mono - mean) / stddev;
+		mono = (mono - mean) / stddev
 
-		data[i,:] = mono[0:44100]
+		start = random.randint(0, mono-44100 - 1)
+		data[i,:] = mono[start:start + 44100]
 
 		labels.append(label_indexes[file_name.split('/')[1]])
 	
