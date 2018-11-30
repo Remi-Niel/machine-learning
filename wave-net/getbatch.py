@@ -48,8 +48,8 @@ def getBatch(size = 150, train = True):
 		(sample_rate, signal) = wavfile.read(file_name)
 		del sample_rate
 
-		#tmp = random.randint(0, len(signal)-44100 - 1)
-		tmp = 0;
+		tmp = random.randint(0, len(signal)-44100 - 1)
+		tmp = 0
 		signal = signal[tmp:(tmp + 44100)]
 
 		mono = signal.sum(axis=1) / 2
