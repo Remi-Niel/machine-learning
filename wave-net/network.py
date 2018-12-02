@@ -19,10 +19,17 @@ input_shape = (TIME_PERIODS*num_sensors)
 # 1D CNN neural network
 model_m = Sequential()
 model_m.add(Reshape((TIME_PERIODS, num_sensors),  input_shape=(input_shape,)))
-model_m.add(Conv1D(64, 4, strides = 4, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
-model_m.add(Conv1D(64, 3, strides = 3, activation='relu'))
-model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
-model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(128, 4, strides = 4, activation='relu', padding='valid', input_shape=(TIME_PERIODS, num_sensors)))
+model_m.add(MaxPooling1D(2))
+model_m.add(Conv1D(128, 4, strides = 4, activation='relu', padding='valid'))
+model_m.add(MaxPooling1D(2))
+model_m.add(Conv1D(256, 3, strides = 3, activation='relu', padding='valid'))
+model_m.add(MaxPooling1D(2))
+model_m.add(Conv1D(256, 2, strides = 2, activation='relu', padding='valid'))
+model_m.add(MaxPooling1D(2))
+model_m.add(Conv1D(256, 2, strides = 2, activation='relu', padding='valid'))
+model_m.add(MaxPooling1D(2))
+model_m.add(Conv1D(512, 2, strides = 2, activation='relu', padding='valid'))
 model_m.add(Flatten())
 model_m.add(Dense(1024))
 model_m.add(Dropout(0.5))
@@ -46,7 +53,7 @@ model_m.compile(loss='categorical_crossentropy',
 # Hyper-parameters
 BATCH_SIZE = 10000
 STEPS_PER_EPOCH = 100
-EPOCHS = 10
+EPOCHS = 100
 
 res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH)
 

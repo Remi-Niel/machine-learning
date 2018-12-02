@@ -19,7 +19,7 @@ def num_class():
 def one_hot(label_array,num_classes):
     return np.squeeze(np.eye(num_classes)[label_array.reshape(-1)])
 
-def getBatch(size = 200, train = True):
+def getBatch(size = 10, train = True):
 	start = 0
 	end = 0.8
 	if not train:
@@ -34,7 +34,7 @@ def getBatch(size = 200, train = True):
 	label_indexes = {labels[i]: i for i in range(0,NUM_LABELS)} #testing labels
 	#print(label_indexes)
 
-	data = np.zeros((size,44100))
+	data = []
 	labels = []
 
 
@@ -48,9 +48,8 @@ def getBatch(size = 200, train = True):
 		(sample_rate, signal) = wavfile.read(file_name)
 		del sample_rate
 
-		tmp = random.randint(0, len(signal)-44100 - 1)
-		#tmp = 0
-		signal = signal[tmp:(tmp + 44100)]
+		tmp = random.randint(0, len(signal)-22050 - 1)
+		signal = signal[tmp:(tmp + 22050):2]
 
 		mono = signal.sum(axis=1) / 2
 
@@ -59,13 +58,13 @@ def getBatch(size = 200, train = True):
 
 		mono = (mono - mean) / stddev
 
-		data[i,:] = mono
+		data.append(mono.reshape(11025,1))
 
 		labels.append(label_indexes[file_name.split('/')[1]])
 	
 	labels = np.array(labels)
 
-	return (data,one_hot(labels,NUM_LABELS))
+	return (np.array(data),one_hot(labels,NUM_LABELS))
 
 def generator(n):
 	for idx in range(n):
