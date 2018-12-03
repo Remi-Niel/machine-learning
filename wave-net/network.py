@@ -4,7 +4,7 @@ import numpy as np
 import keras
 from keras.optimizers import SGD
 from keras.models import Sequential
-from keras.layers import Dense, Dropout, Flatten, Reshape, GlobalAveragePooling1D
+from keras.layers import Dense, Dropout, Flatten, Reshape, SpatialDropout1D
 from keras.layers import Conv2D, MaxPooling2D, Conv1D, MaxPooling1D, Flatten
 from keras.utils import np_utils
 
