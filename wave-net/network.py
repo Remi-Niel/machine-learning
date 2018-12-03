@@ -40,6 +40,7 @@ model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
 model_m.add(Flatten())
 model_m.add(Dense(1024))
+model_m.add(Dropout(0.5))
 model_m.add(Dense(num_classes, activation='softmax'))
 print(model_m.summary())
 
