@@ -36,11 +36,11 @@ model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(256, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
-model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(1024, 2, strides = 2, activation='relu'))
 model_m.add(Flatten())
 model_m.add(Dense(1024))
-model_m.add(Dropout(0.5))
+model_m.add(Dropout(0.0))
 model_m.add(Dense(num_classes, activation='softmax'))
 print(model_m.summary())
 
@@ -52,7 +52,7 @@ print("\n--- Fit the model ---\n")
 # if it fails to improve for ten consecutive epochs,
 # training stops early
 callbacks_list = [
-    keras.callbacks.EarlyStopping(monitor='acc', patience=10)
+    keras.callbacks.EarlyStopping(monitor='val_acc', patience=10)
 ]
 
 model_m.compile(loss='categorical_crossentropy',
@@ -60,10 +60,11 @@ model_m.compile(loss='categorical_crossentropy',
 
 # Hyper-parameters
 BATCH_SIZE = 10000
-STEPS_PER_EPOCH = 100
-EPOCHS = 200
+STEPS_PER_EPOCH = 1000
+STEPS_PER_VAL = 100
+EPOCHS = 100
 
-res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH)
+res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH, validation_data = getbatch.val_generator(EPOCHS * STEPS_PER_VAL), validation_steps=100)
 
 print("\n--- Check against test data ---\n")
 
