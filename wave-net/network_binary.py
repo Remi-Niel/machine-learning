@@ -23,7 +23,6 @@ input_shape = (TIME_PERIODS*num_sensors)
 model_m = Sequential()
 model_m.add(Reshape((TIME_PERIODS, num_sensors),  input_shape=(input_shape,)))
 model_m.add(Conv1D(64, 2, strides = 2, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
-model_m.add(SpatialDropout1D(0.2))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
@@ -52,7 +51,7 @@ print("\n--- Fit the model ---\n")
 # if it fails to improve for ten consecutive epochs,
 # training stops early
 callbacks_list = [
-    keras.callbacks.EarlyStopping(monitor='acc', patience=5)
+    keras.callbacks.EarlyStopping(monitor='acc', patience=2)
 ]
 
 model_m.compile(loss='categorical_crossentropy',
@@ -61,7 +60,7 @@ model_m.compile(loss='categorical_crossentropy',
 # Hyper-parameters
 TEST_SIZE = 1000
 STEPS_PER_EPOCH = 100
-EPOCHS = 100
+EPOCHS = 40
 
 res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH,0), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH)
 
