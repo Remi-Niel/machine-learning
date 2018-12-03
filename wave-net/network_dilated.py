@@ -39,8 +39,8 @@ def get_model(input_size):
 	input_ = Input(shape=(input_size, 1))
 	A, B = wavenetBlock(64, 2, 2)(input_)
 	skip_connections = [B]
-	for i in range(36):
-		A, B = wavenetBlock(64, 2, 2**((i+2)%12))(A)
+	for i in range(20):
+		A, B = wavenetBlock(64, 2, 2**((i+2)%9))(A)
 		skip_connections.append(B)
 	net = add(skip_connections)
 	net = Activation('relu')(net)
@@ -49,7 +49,7 @@ def get_model(input_size):
 	net = Flatten()(net)
 	net = Dense(num_classes, activation='softmax')(net)
 	model = Model(input=input_, output=net)
-	model.compile(loss='categorical_crossentropy', optimizer='sgd',
+	model.compile(loss='categorical_crossentropy', optimizer='Adam',
 	  metrics=['accuracy'])
 	model.summary()
 	return model
@@ -73,7 +73,7 @@ model_m.compile(loss='categorical_crossentropy',
 
 # Hyper-parameters
 BATCH_SIZE = 10000
-STEPS_PER_EPOCH = 300
+STEPS_PER_EPOCH = 100
 EPOCHS = 3000
 
 res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH)

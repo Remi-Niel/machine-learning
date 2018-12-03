@@ -19,7 +19,7 @@ def num_class():
 def one_hot(label_array,num_classes):
     return np.squeeze(np.eye(num_classes)[label_array.reshape(-1)])
 
-def getBatch(size = 10, train = True):
+def getBatch(size = 30, train = True):
 	start = 0
 	end = 0.8
 	if not train:
@@ -48,12 +48,12 @@ def getBatch(size = 10, train = True):
 		(sample_rate, signal) = wavfile.read(file_name)
 		del sample_rate
 
-		tmp = random.randint(0, len(signal)-22050 - 1)
-		signal = signal[tmp:(tmp + 22050):2]
+		tmp = random.randint(0, len(signal)-44100 - 1)
+		signal = signal[tmp:(tmp + 44100):4]
 
 		mono = signal.sum(axis=1) / 2
 
-		mean = np.mean(mono)
+		mean = 0
 		stddev = np.std(mono)
 
 		mono = (mono - mean) / stddev

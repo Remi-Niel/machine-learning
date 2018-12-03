@@ -10,6 +10,10 @@ from keras.utils import np_utils
 
 import getbatch
 
+f= open("log","a+")
+f.write("\n")
+f.write("\n")
+f.write("Network_multi")
 num_classes = getbatch.num_class()
 
 TIME_PERIODS = 44100
@@ -19,17 +23,21 @@ input_shape = (TIME_PERIODS*num_sensors)
 # 1D CNN neural network
 model_m = Sequential()
 model_m.add(Reshape((TIME_PERIODS, num_sensors),  input_shape=(input_shape,)))
-model_m.add(Conv1D(128, 4, strides = 4, activation='relu', padding='valid', input_shape=(TIME_PERIODS, num_sensors)))
+model_m.add(Conv1D(64, 2, strides = 2, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
 model_m.add(MaxPooling1D(2))
-model_m.add(Conv1D(128, 4, strides = 4, activation='relu', padding='valid'))
+model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
-model_m.add(Conv1D(256, 3, strides = 3, activation='relu', padding='valid'))
+model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
-model_m.add(Conv1D(256, 2, strides = 2, activation='relu', padding='valid'))
+model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
-model_m.add(Conv1D(256, 2, strides = 2, activation='relu', padding='valid'))
+model_m.add(Conv1D(256, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
-model_m.add(Conv1D(512, 2, strides = 2, activation='relu', padding='valid'))
+model_m.add(Conv1D(256, 2, strides = 2, activation='relu'))
+model_m.add(MaxPooling1D(2))
+model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
+model_m.add(MaxPooling1D(2))
+model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
 model_m.add(Flatten())
 model_m.add(Dense(1024))
 model_m.add(Dropout(0.5))
@@ -68,10 +76,5 @@ score = model_m.evaluate(x_test, y_test, verbose=1)
 print("\nAccuracy on test data: %0.4f" % score[1])
 print("\nLoss on test data: %0.4f" % score[0])
 
-# %%
-
-print("\n--- Confusion matrix for test data ---\n")
-
-# %%
-
-print("\n--- Classification report for test data ---\n")
+f.write("\nAccuracy on test data: %0.4f" % score[1])
+f.write("\nLoss on test data: %0.4f" % score[0])
