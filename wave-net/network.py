@@ -55,7 +55,7 @@ callbacks_list = [
 ]
 
 model_m.compile(loss='categorical_crossentropy',
-                optimizer='Adam', metrics=['accuracy'])
+                optimizer='sgd', metrics=['accuracy'])
 
 # Hyper-parameters
 BATCH_SIZE = 10000
