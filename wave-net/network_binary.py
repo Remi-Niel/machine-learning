@@ -26,7 +26,6 @@ model_m.add(Conv1D(64, 2, strides = 2, activation='relu', input_shape=(TIME_PERI
 model_m.add(SpatialDropout1D(0.2))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
-model_m.add(SpatialDropout1D(0.2))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
