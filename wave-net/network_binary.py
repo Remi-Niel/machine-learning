@@ -75,10 +75,10 @@ for CLASS in range(11):
 
     score = model_m.evaluate(x_test, getbatch.one_hot(y_test[:,CLASS],2), verbose=1)
 
-    print(str(CLASS))
+    print("\n" + str(CLASS))
     print("\nAccuracy on test data: %0.4f" % score[1])
     print("\nLoss on test data: %0.4f" % score[0])
 
-    f.write(str(CLASS))
+    f.write("\n" + str(CLASS))
     f.write("\nAccuracy on test data: %0.4f" % score[1])
     f.write("\nLoss on test data: %0.4f" % score[0])
