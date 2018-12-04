@@ -79,7 +79,7 @@ def generator(n,i):
 
 def val_generator(n,i):
 	for idx in range(n):
-		(x,y) = getBatch(100,False)
+		(x,y) = getBatch(i,train = False)
 		yield (x,one_hot(y[:,i],2))
 		
 
