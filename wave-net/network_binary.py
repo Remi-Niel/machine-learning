@@ -23,6 +23,7 @@ input_shape = (TIME_PERIODS*num_sensors)
 model_m = Sequential()
 model_m.add(Reshape((TIME_PERIODS, num_sensors),  input_shape=(input_shape,)))
 model_m.add(Conv1D(64, 2, strides = 2, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
+model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
@@ -46,34 +47,38 @@ print(model_m.summary())
 
 print("\n--- Fit the model ---\n")
 
-# The EarlyStopping callback monitors training accuracy:
-# if it fails to improve for ten consecutive epochs,
-# training stops early
-callbacks_list = [
-    keras.callbacks.EarlyStopping(monitor='val_acc', patience=5)
-]
+for CLASS in 11:
 
-model_m.compile(loss='categorical_crossentropy',
-                optimizer=keras.optimizers.Adam(), metrics=['accuracy'])
+    # The EarlyStopping callback monitors training accuracy:
+    # if it fails to improve for ten consecutive epochs,
+    # training stops early
+    callbacks_list = [
+        keras.callbacks.EarlyStopping(monitor='val_acc', patience=5)
+    ]
 
-# Hyper-parameters
-TEST_SIZE = 1000
-STEPS_PER_EPOCH = 100
-STEPS_PER_VAL = 100
-EPOCHS = 40
+    model_m.compile(loss='categorical_crossentropy',
+                    optimizer=keras.optimizers.Adam(), metrics=['accuracy'])
 
-res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH,0), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH, validation_data = getbatch.val_generator(EPOCHS * STEPS_PER_VAL,0), validation_steps=STEPS_PER_VAL)
+    # Hyper-parameters
+    TEST_SIZE = 1000
+    STEPS_PER_EPOCH = 1
+    STEPS_PER_VAL = 1
+    EPOCHS = 1
 
-print("\n--- Check against test data ---\n")
+    res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH,CLASS), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH, validation_data = getbatch.val_generator(EPOCHS * STEPS_PER_VAL,CLASS), validation_steps=STEPS_PER_VAL)
 
-(x_test, y_test) = getbatch.getBatch(0,TEST_SIZE,False)
+    print("\n--- Check against test data ---\n")
 
-# Set input_shape / reshape for Keras
+    (x_test, y_test) = getbatch.getBatch(CLASS,TEST_SIZE,False)
 
-score = model_m.evaluate(x_test, getbatch.one_hot(y_test[:,0],2), verbose=1)
+    # Set input_shape / reshape for Keras
 
-print("\nAccuracy on test data: %0.4f" % score[1])
-print("\nLoss on test data: %0.4f" % score[0])
+    score = model_m.evaluate(x_test, getbatch.one_hot(y_test[:,CLASS],2), verbose=1)
 
-f.write("\nAccuracy on test data: %0.4f" % score[1])
-f.write("\nLoss on test data: %0.4f" % score[0])
+    f.write(CLASS)
+    print("\nAccuracy on test data: %0.4f" % score[1])
+    print("\nLoss on test data: %0.4f" % score[0])
+
+    f.write(CLASS)
+    f.write("\nAccuracy on test data: %0.4f" % score[1])
+    f.write("\nLoss on test data: %0.4f" % score[0])
