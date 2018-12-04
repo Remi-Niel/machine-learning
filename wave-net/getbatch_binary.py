@@ -38,7 +38,7 @@ def getBatch(t, size = 150, train = True):
 
 	#print(label_indexes)
 
-	data = np.zeros((size,44100))
+	data = np.zeros((int(size),44100))
 	labels = []
 
 	for i in range(size):
