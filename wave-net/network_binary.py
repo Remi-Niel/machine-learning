@@ -51,7 +51,7 @@ print("\n--- Fit the model ---\n")
 # if it fails to improve for ten consecutive epochs,
 # training stops early
 callbacks_list = [
-    keras.callbacks.EarlyStopping(monitor='acc', patience=4)
+    keras.callbacks.EarlyStopping(monitor='val_acc', patience=5)
 ]
 
 model_m.compile(loss='categorical_crossentropy',
@@ -60,9 +60,10 @@ model_m.compile(loss='categorical_crossentropy',
 # Hyper-parameters
 TEST_SIZE = 1000
 STEPS_PER_EPOCH = 100
+STEPS_PER_VAL = 100
 EPOCHS = 40
 
-res = model_m.fit_generator(getbatch_binary.generator(EPOCHS*STEPS_PER_EPOCH,0), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH, validation_data = getbatch_binary.val_generator(EPOCHS * STEPS_PER_VAL), validation_steps=100)
+res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH,0), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH, validation_data = getbatch.val_generator(EPOCHS * STEPS_PER_VAL), validation_steps=100)
 
 print("\n--- Check against test data ---\n")
 
