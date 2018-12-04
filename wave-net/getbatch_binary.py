@@ -31,9 +31,9 @@ def one_hot(label_array,num_classes):
 
 def getBatch(t, size = 150, train = True):
 	start = 0
-	end = 0.8
+	end = 0.9
 	if not train:
-		start = 0.8
+		start = end
 		end = 1
 
 	#print(label_indexes)

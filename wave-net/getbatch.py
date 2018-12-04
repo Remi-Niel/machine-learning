@@ -32,7 +32,7 @@ def getBatch(size = 100, train = True):
 	start = 0
 	end = 0.9
 	if not train:
-		start = 0.9
+		start = end
 		end = 1
 
 	data = np.zeros((size,44100))
