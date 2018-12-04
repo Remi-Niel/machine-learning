@@ -42,7 +42,7 @@ def getBatch(t, size = 150, train = True):
 	labels = []
 
 	for i in range(size):
-		file_name = sample_files[random.randint(start * NUM_DATAFILES, end * NUM_DATAFILES - 1)]
+		file_name = sample_files[random.randint(int(start * NUM_DATAFILES), int(end * NUM_DATAFILES - 1))]
 		if random.randint(0,1):
 			while label_indexes[file_name.split('/')[1]] != t:
 				file_name = sample_files[random.randint(int(start * NUM_DATAFILES), int(end * NUM_DATAFILES - 1))]
