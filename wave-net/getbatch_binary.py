@@ -76,6 +76,11 @@ def generator(n,i):
 	for idx in range(n):
 		(x,y) = getBatch(i)
 		yield (x,one_hot(y[:,i],2))
+
+def val_generator(n):
+	for idx in range(n):
+		(x,y) = getBatch(100,False)
+		yield (x,one_hot(y[:,i],2))
 		
 
 #print(getBatch(1000,False))

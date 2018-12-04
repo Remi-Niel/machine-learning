@@ -62,7 +62,7 @@ TEST_SIZE = 1000
 STEPS_PER_EPOCH = 100
 EPOCHS = 40
 
-res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH,0), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH)
+res = model_m.fit_generator(getbatch_binary.generator(EPOCHS*STEPS_PER_EPOCH,0), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH, validation_data = getbatch_binary.val_generator(EPOCHS * STEPS_PER_VAL), validation_steps=100)
 
 print("\n--- Check against test data ---\n")
 
