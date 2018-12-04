@@ -47,7 +47,7 @@ print(model_m.summary())
 
 print("\n--- Fit the model ---\n")
 
-for CLASS in 11:
+for CLASS in range(11):
 
     # The EarlyStopping callback monitors training accuracy:
     # if it fails to improve for ten consecutive epochs,
