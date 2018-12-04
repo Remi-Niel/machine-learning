@@ -64,7 +64,7 @@ STEPS_PER_EPOCH = 1000
 STEPS_PER_VAL = 100
 EPOCHS = 100
 
-res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH, validation_data = getbatch.val_generator(EPOCHS * STEPS_PER_VAL), validation_steps=100)
+res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH, validation_data = getbatch.val_generator(EPOCHS * STEPS_PER_VAL), validation_steps=STEPS_PER_VAL)
 
 print("\n--- Check against test data ---\n")
 

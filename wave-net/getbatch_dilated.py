@@ -70,6 +70,10 @@ def generator(n):
 	for idx in range(n):
 		(x,y) = getBatch()
 		yield (x,y)
+def val_generator(n):
+	for idx in range(n):
+		(x,y) = getBatch(train=False)
+		yield (x,y)		
 		
 
 #print(getBatch(1000,False))
