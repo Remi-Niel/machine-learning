@@ -30,16 +30,16 @@ def one_hot(label_array,num_classes):
 
 def getBatch(size = 100, train = True):
 	start = 0
-	end = 0.8
+	end = 0.9
 	if not train:
-		start = 0.8
+		start = 0.9
 		end = 1
 
 	data = np.zeros((size,44100))
 	labels = []
 
 	for i in range(size):
-		file_name = sample_files[random.randint(start * NUM_DATAFILES, end * NUM_DATAFILES - 1)]
+		file_name = sample_files[random.randint(int(start * NUM_DATAFILES), int(end * NUM_DATAFILES - 1))]
 		(sample_rate, signal) = wavfile.read(file_name)
 		del sample_rate
 
