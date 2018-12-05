@@ -48,12 +48,12 @@ print(model_m.summary())
 print("\n--- Fit the model ---\n")
 
 for CLASS in range(11):
-
+    print("\nClass: " + getbatch.labels[CLASS])	
     # The EarlyStopping callback monitors training accuracy:
     # if it fails to improve for ten consecutive epochs,
     # training stops early
     callbacks_list = [
-        keras.callbacks.EarlyStopping(monitor='val_acc', patience=5)
+        keras.callbacks.EarlyStopping(monitor='val_acc', patience=20, restore_best_weights = True, verbose = 1)
     ]
 
     model_m.compile(loss='categorical_crossentropy',
@@ -63,7 +63,7 @@ for CLASS in range(11):
     TEST_SIZE = 1000
     STEPS_PER_EPOCH = 100
     STEPS_PER_VAL = 100
-    EPOCHS = 100
+    EPOCHS = 1000
 
     res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH,CLASS), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH, validation_data = getbatch.val_generator(EPOCHS * STEPS_PER_VAL,CLASS), validation_steps=STEPS_PER_VAL)
 
@@ -75,10 +75,9 @@ for CLASS in range(11):
 
     score = model_m.evaluate(x_test, getbatch.one_hot(y_test[:,CLASS],2), verbose=1)
 
-    print("\n" + str(CLASS))
-    print("\nAccuracy on test data: %0.4f" % score[1])
-    print("\nLoss on test data: %0.4f" % score[0])
+    print("Accuracy on test data: %0.4f" % score[1])
+    print("Loss on test data: %0.4f" % score[0])
 
-    f.write("\n" + str(CLASS))
+    f.write("\n\nClass: " + getbatch.labels[CLASS])
     f.write("\nAccuracy on test data: %0.4f" % score[1])
     f.write("\nLoss on test data: %0.4f" % score[0])

@@ -10021,3 +10021,7 @@ Using TensorFlow backend.
 Accuracy on test data: 0.6835
 
 Loss on test data: 0.9252
+Traceback (most recent call last):
+  File "network_binary.py", line 3, in <module>
+    import keras
+ImportError: No module named keras

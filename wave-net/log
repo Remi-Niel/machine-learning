@@ -1,113 +1,47 @@
 
 
-Network_multi
-
-Network_multi
-Accuracy on test data: 0.7713
-Loss on test data: 0.6657
-
-Network_binary
-Accuracy on test data: 0.8460
-Loss on test data: 0.4158
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
 Network_binary
 
-Network_binary
+Class: cel
+Accuracy on test data: 0.8350
+Loss on test data: 0.5552
 
-Network_binary
-Accuracy on test data: 0.8260
-Loss on test data: 0.5187
+Class: cla
+Accuracy on test data: 0.8060
+Loss on test data: 0.5472
 
-Network_multi
-Accuracy on test data: 0.6905
-Loss on test data: 0.9133
+Class: flu
+Accuracy on test data: 0.8500
+Loss on test data: 0.4372
 
-Network_binary
+Class: gac
+Accuracy on test data: 0.8820
+Loss on test data: 0.3433
 
-Network_binary
+Class: gel
 Accuracy on test data: 0.8270
-Loss on test data: 0.4005
+Loss on test data: 0.4661
 
-Network_binary
-Accuracy on test data: 0.8240
-Loss on test data: 0.4969
+Class: org
+Accuracy on test data: 0.8570
+Loss on test data: 0.4229
 
-Network_multi
-Accuracy on test data: 0.6655
-Loss on test data: 1.0003
+Class: pia
+Accuracy on test data: 0.8710
+Loss on test data: 0.2947
 
-Network_multi
+Class: sax
+Accuracy on test data: 0.8110
+Loss on test data: 0.5578
 
-Network_multi
+Class: tru
+Accuracy on test data: 0.8890
+Loss on test data: 0.3444
 
-Network_multi
-Accuracy on test data: 0.6835
-Loss on test data: 0.9252
+Class: vio
+Accuracy on test data: 0.8100
+Loss on test data: 0.4448
 
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-Accuracy on test data: 0.8978
-Loss on test data: 0.3049
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-
-Network_multi
-Accuracy on test data: 0.5656
-Loss on test data: 1.5073
-
-Network_multi
-
-Network_multi
-
-Network_multi
-Accuracy on test data: 0.6066
-Loss on test data: 1.4522
+Class: voi
+Accuracy on test data: 0.8830
+Loss on test data: 0.3308

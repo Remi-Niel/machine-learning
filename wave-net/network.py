@@ -23,11 +23,7 @@ input_shape = (TIME_PERIODS*num_sensors)
 # 1D CNN neural network
 model_m = Sequential()
 model_m.add(Reshape((TIME_PERIODS, num_sensors),  input_shape=(input_shape,)))
-model_m.add(Conv1D(64, 2, strides = 2, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
-model_m.add(MaxPooling1D(2))
-model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
-model_m.add(MaxPooling1D(2))
-model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(128, 2, strides = 2, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
@@ -36,8 +32,12 @@ model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(256, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
-model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
+model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(1024, 2, strides = 2, activation='relu'))
+model_m.add(MaxPooling1D(2))
+model_m.add(Conv1D(2048, 2, strides = 2, activation='relu'))
+model_m.add(MaxPooling1D(2))
+model_m.add(Conv1D(2048, 2, strides = 2, activation='relu'))
 model_m.add(Flatten())
 model_m.add(Dense(1024))
 model_m.add(Dropout(0.5))
@@ -52,7 +52,7 @@ print("\n--- Fit the model ---\n")
 # if it fails to improve for ten consecutive epochs,
 # training stops early
 callbacks_list = [
-    keras.callbacks.EarlyStopping(monitor='val_acc', patience=5)
+    keras.callbacks.EarlyStopping(monitor='val_acc', patience=5, restore_best_weights = True, verbose = 1)
 ]
 
 model_m.compile(loss='categorical_crossentropy',
