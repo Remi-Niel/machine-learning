@@ -10,20 +10,22 @@ from keras.utils import np_utils
 
 import getbatch
 
-f= open("log","a+")
+f= open("log","a+",1)
 f.write("\n")
 f.write("\n")
 f.write("Network_multi")
 num_classes = getbatch.num_class()
 
-TIME_PERIODS = 44100
+TIME_PERIODS = 32768
 num_sensors = 1
 input_shape = (TIME_PERIODS*num_sensors)
 
 # 1D CNN neural network
 model_m = Sequential()
 model_m.add(Reshape((TIME_PERIODS, num_sensors),  input_shape=(input_shape,)))
-model_m.add(Conv1D(128, 2, strides = 2, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
+model_m.add(Conv1D(64, 4, strides = 4, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
+model_m.add(Conv1D(64, 4, strides = 4, activation='relu'))
+model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
@@ -33,11 +35,7 @@ model_m.add(Conv1D(256, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
-model_m.add(Conv1D(1024, 2, strides = 2, activation='relu'))
-model_m.add(MaxPooling1D(2))
-model_m.add(Conv1D(2048, 2, strides = 2, activation='relu'))
-model_m.add(MaxPooling1D(2))
-model_m.add(Conv1D(2048, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
 model_m.add(Flatten())
 model_m.add(Dense(1024))
 model_m.add(Dropout(0.5))
@@ -60,8 +58,8 @@ model_m.compile(loss='categorical_crossentropy',
 
 # Hyper-parameters
 BATCH_SIZE = 10000
-STEPS_PER_EPOCH = 1000
-STEPS_PER_VAL = 100
+STEPS_PER_EPOCH = 100
+STEPS_PER_VAL = 10
 EPOCHS = 100
 
 res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH, validation_data = getbatch.val_generator(EPOCHS * STEPS_PER_VAL), validation_steps=STEPS_PER_VAL)

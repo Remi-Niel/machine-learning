@@ -9,11 +9,11 @@ from keras.utils import np_utils
 
 import getbatch_binary as getbatch
 
-f= open("log","a+")
+f= open("log","a+",1)
 f.write("\n")
 f.write("\n")
 f.write("Network_binary")
-num_classes = 2 #True/False
+num_classes = 1 #True/False
 
 TIME_PERIODS = 44100
 num_sensors = 1
@@ -40,7 +40,7 @@ model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
 model_m.add(Flatten())
 model_m.add(Dense(1024))
 model_m.add(Dropout(0.5))
-model_m.add(Dense(num_classes, activation='softmax'))
+model_m.add(Dense(num_classes, activation='sigmoid'))
 print(model_m.summary())
 
 # %%
@@ -53,14 +53,15 @@ for CLASS in range(11):
     # if it fails to improve for ten consecutive epochs,
     # training stops early
     callbacks_list = [
-        keras.callbacks.EarlyStopping(monitor='val_acc', patience=20, restore_best_weights = True, verbose = 1)
+        keras.callbacks.EarlyStopping(monitor='val_acc', patience=20, restore_best_weights = True, verbose = 1),
+	keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=5, min_lr=0.000001)
     ]
 
-    model_m.compile(loss='categorical_crossentropy',
-                    optimizer=keras.optimizers.Adam(), metrics=['accuracy'])
+    model_m.compile(loss='binary_crossentropy',
+                    optimizer="Adam", metrics=['accuracy'])
 
     # Hyper-parameters
-    TEST_SIZE = 1000
+    TEST_SIZE = 10000
     STEPS_PER_EPOCH = 100
     STEPS_PER_VAL = 100
     EPOCHS = 1000
@@ -73,7 +74,7 @@ for CLASS in range(11):
 
     # Set input_shape / reshape for Keras
 
-    score = model_m.evaluate(x_test, getbatch.one_hot(y_test[:,CLASS],2), verbose=1)
+    score = model_m.evaluate(x_test, y_test[:,CLASS], verbose=1)
 
     print("Accuracy on test data: %0.4f" % score[1])
     print("Loss on test data: %0.4f" % score[0])

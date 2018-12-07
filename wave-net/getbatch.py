@@ -28,14 +28,14 @@ def num_class():
 def one_hot(label_array,num_classes):
     return np.squeeze(np.eye(num_classes)[label_array.reshape(-1)])
 
-def getBatch(size = 100, train = True):
+def getBatch(size = 500, train = True):
 	start = 0
 	end = 0.9
 	if not train:
 		start = end
 		end = 1
 
-	data = np.zeros((size,44100))
+	data = np.zeros((size,32768))
 	labels = []
 
 	for i in range(size):
@@ -43,16 +43,18 @@ def getBatch(size = 100, train = True):
 		(sample_rate, signal) = wavfile.read(file_name)
 		del sample_rate
 
-		tmp = random.randint(0, len(signal)-44100 - 1)
+		tmp = random.randint(0, len(signal)-32768 - 1)
 		#tmp = 0
-		signal = signal[tmp:(tmp + 44100)]
+		signal = signal[tmp:(tmp + 32768)]
 
 		mono = signal.sum(axis=1) / 2
 
-		mean = np.mean(mono)
+		mean = 0
 		stddev = np.std(mono)
+		if stddev == 0:
+			stddev = 1
 
-		mono = (mono - mean) / stddev
+		mono = (mono - 0) / stddev
 
 		data[i,:] = mono
 
@@ -69,7 +71,7 @@ def generator(n):
 		
 def val_generator(n):
 	for idx in range(n):
-		(x,y) = getBatch(100,False)
+		(x,y) = getBatch(train = False)
 		yield (x,y)
 		
 

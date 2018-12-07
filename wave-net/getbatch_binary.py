@@ -59,8 +59,10 @@ def getBatch(t, size = 150, train = True):
 		tmp = random.randint(0, len(signal)-44100 - 1)
 		mono = mono[tmp:tmp+44100]
 
-		mean = np.mean(mono)
+		mean = 0
 		stddev = np.std(mono)
+		if stddev == 0:
+			stddev = 1
 
 		mono = (mono - mean) / stddev
 
@@ -75,12 +77,12 @@ def getBatch(t, size = 150, train = True):
 def generator(n,i):
 	for idx in range(n):
 		(x,y) = getBatch(i)
-		yield (x,one_hot(y[:,i],2))
+		yield (x,y[:,i])
 
 def val_generator(n,i):
 	for idx in range(n):
 		(x,y) = getBatch(i,train = False)
-		yield (x,one_hot(y[:,i],2))
+		yield (x,y[:,i])
 		
 
 #print(getBatch(1000,False))
