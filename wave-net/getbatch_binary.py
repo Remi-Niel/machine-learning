@@ -6,6 +6,7 @@ from scipy.io import wavfile
 import time
 import progressbar
 import numpy as np
+import sys
 
 directory = 'data/'
 
@@ -29,7 +30,7 @@ def one_hot(label_array,num_classes):
 	x = label_array.astype(int)
 	return np.squeeze(np.eye(num_classes)[x.reshape(-1)])
 
-def getBatch(t, size = 150, train = True):
+def getBatch(t, size = 50, train = True):
 	start = 0
 	end = 0.9
 	if not train:
