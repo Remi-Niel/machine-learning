@@ -46,33 +46,33 @@ def model():
     else:
         model_m.add(Conv1D({{choice([32,64,128])}}, 2, strides = 2, activation='relu'))
 
-    model_m.add(Conv1D({{choice([64,128,256])}}, 2, strides = 2, activation='relu'))
+    model_m.add(Conv1D({{choice([32,64,128,256])}}, 2, strides = 2, activation='relu'))
     if conditional({{choice(['less MaxPooling1D','normal'])}}) != 'less MaxPooling1D':
         model_m.add(MaxPooling1D(2))
     else:
-        model_m.add(Conv1D({{choice([64,128,256])}}, 2, strides = 2, activation='relu'))
+        model_m.add(Conv1D({{choice([32,64,128,256])}}, 2, strides = 2, activation='relu'))
 
-    model_m.add(Conv1D({{choice([64,128,256])}}, 2, strides = 2, activation='relu'))
+    model_m.add(Conv1D({{choice([32,64,128,256])}}, 2, strides = 2, activation='relu'))
     if conditional({{choice(['less MaxPooling1D','normal'])}}) != 'less MaxPooling1D':
         model_m.add(MaxPooling1D(2))
     else:
-        model_m.add(Conv1D({{choice([64,128,256])}}, 2, strides = 2, activation='relu'))
+        model_m.add(Conv1D({{choice([32,64,128,256])}}, 2, strides = 2, activation='relu'))
 
-    model_m.add(Conv1D({{choice([128,256,512])}}, 2, strides = 2, activation='relu'))
+    model_m.add(Conv1D({{choice([32,64,128,256])}}, 2, strides = 2, activation='relu'))
     model_m.add(MaxPooling1D(2))
 
-    model_m.add(Conv1D({{choice([128,256,512])}}, 2, strides = 2, activation='relu'))
+    model_m.add(Conv1D({{choice([32,64,128,256])}}, 2, strides = 2, activation='relu'))
     model_m.add(MaxPooling1D(2))
 
-    model_m.add(Conv1D({{choice([128,256,512,1024])}}, 2, strides = 2, activation='relu'))
+    model_m.add(Conv1D({{choice([32,64,128,256])}}, 2, strides = 2, activation='relu'))
     model_m.add(MaxPooling1D(2))
 
-    model_m.add(Conv1D({{choice([128,256,512,1024])}}, 2, strides = 2, activation='relu'))
+    model_m.add(Conv1D({{choice([32,64,128,256])}}, 2, strides = 2, activation='relu'))
 
     model_m.add(Flatten())
 
     if conditional({{choice(["dense","direct"])}}) != "direct":
-        model_m.add(Dense({{choice([64,128,256,512,1024,2048])}}))
+        model_m.add(Dense({{choice([32,64,128,256,512,1024])}}))
         model_m.add(Dropout({{uniform(0, 1)}}))
     model_m.add(Dense(num_classes, activation='sigmoid'))
     print(model_m.summary())

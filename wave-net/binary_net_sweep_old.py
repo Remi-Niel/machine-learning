@@ -25,35 +25,54 @@ def model():
     K.clear_session()
     CLASS = 0
     num_classes = 1 #True/False
-    IMSIZE = 128
-    length = {{choice([4,5,6])}}
+    TIME_PERIODS = 44100
+    num_sensors = 1
+    input_shape = (TIME_PERIODS*num_sensors)
 
     # 1D CNN neural network
     model_m = Sequential()
-    model_m.add(Reshape((IMSIZE, IMSIZE,1),  input_shape=(IMSIZE,IMSIZE)))
+    model_m.add(Reshape((TIME_PERIODS, num_sensors),  input_shape=(input_shape,)))
     
-    model_m.add(Conv2D({{choice([32,64,128,256,512])}}, kernel_size = {{choice([3,5,7,9])}}, activation='relu', padding = 'same'))
-    model_m.add(MaxPooling2D(2))    
-    model_m.add(Conv2D({{choice([32,64,128,256,512])}}, kernel_size = {{choice([3,5,7,9])}}, activation='relu', padding = 'same'))
-    model_m.add(MaxPooling2D(2))
-    model_m.add(Conv2D({{choice([32,64,128,256,512])}}, kernel_size = 3, activation='relu', padding = 'same'))
-    if length>=3:  
-	    model_m.add(MaxPooling2D(2))    
-	    model_m.add(Conv2D({{choice([32,64,128,256,512])}}, kernel_size = 3, activation='relu', padding = 'same'))
-    if length>=4:  
-	    model_m.add(MaxPooling2D(2))
-	    model_m.add(Conv2D({{choice([32,64,128,256,512])}}, kernel_size = 3, activation='relu', padding = 'same')) 
-    if length>=5:  
-    	model_m.add(MaxPooling2D(2))     
-    	model_m.add(Conv2D({{choice([32,64,128,256,512])}}, kernel_size = 3, activation='relu', padding = 'same'))
-    if length>=6:    
-    	model_m.add(MaxPooling2D(2))   
-    	model_m.add(Conv2D({{choice([32,64,128,256,512])}}, kernel_size = 3, activation='relu', padding = 'same'))
-    
+    model_m.add(Conv1D({{choice([32,64,128])}}, 2, strides = 2, activation='relu'))
+
+    if conditional({{choice(['less MaxPooling1D','normal'])}}) != 'less MaxPooling1D':
+        model_m.add(MaxPooling1D(2))
+    else:
+        model_m.add(Conv1D({{choice([32,64,128])}}, 2, strides = 2, activation='relu'))
+
+    model_m.add(Conv1D({{choice([32,64,128])}}, 2, strides = 2, activation='relu'))
+    if conditional({{choice(['less MaxPooling1D','normal'])}}) != 'less MaxPooling1D':
+        model_m.add(MaxPooling1D(2))
+    else:
+        model_m.add(Conv1D({{choice([32,64,128])}}, 2, strides = 2, activation='relu'))
+
+    model_m.add(Conv1D({{choice([64,128,256])}}, 2, strides = 2, activation='relu'))
+    if conditional({{choice(['less MaxPooling1D','normal'])}}) != 'less MaxPooling1D':
+        model_m.add(MaxPooling1D(2))
+    else:
+        model_m.add(Conv1D({{choice([64,128,256])}}, 2, strides = 2, activation='relu'))
+
+    model_m.add(Conv1D({{choice([64,128,256])}}, 2, strides = 2, activation='relu'))
+    if conditional({{choice(['less MaxPooling1D','normal'])}}) != 'less MaxPooling1D':
+        model_m.add(MaxPooling1D(2))
+    else:
+        model_m.add(Conv1D({{choice([64,128,256])}}, 2, strides = 2, activation='relu'))
+
+    model_m.add(Conv1D({{choice([128,256,512])}}, 2, strides = 2, activation='relu'))
+    model_m.add(MaxPooling1D(2))
+
+    model_m.add(Conv1D({{choice([128,256,512])}}, 2, strides = 2, activation='relu'))
+    model_m.add(MaxPooling1D(2))
+
+    model_m.add(Conv1D({{choice([128,256,512,1024])}}, 2, strides = 2, activation='relu'))
+    model_m.add(MaxPooling1D(2))
+
+    model_m.add(Conv1D({{choice([128,256,512,1024])}}, 2, strides = 2, activation='relu'))
+
     model_m.add(Flatten())
 
     if conditional({{choice(["dense","direct"])}}) != "direct":
-        model_m.add(Dense({{choice([32,64,128,256,512,1024,2048])}}))
+        model_m.add(Dense({{choice([64,128,256,512,1024,2048])}}))
         model_m.add(Dropout({{uniform(0, 1)}}))
     model_m.add(Dense(num_classes, activation='sigmoid'))
     print(model_m.summary())
