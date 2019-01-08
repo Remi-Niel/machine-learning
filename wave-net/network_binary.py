@@ -52,7 +52,7 @@ for CLASS in range(11):
     # if it fails to improve for ten consecutive epochs,
     # training stops early
     callbacks_list = [
-        keras.callbacks.EarlyStopping(monitor='val_acc', patience=10, restore_best_weights = True, verbose = 1),
+        keras.callbacks.EarlyStopping(monitor='val_acc', patience=20, restore_best_weights = True, verbose = 1),
 	keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=2, min_lr=0.000001)
     ]
 
@@ -82,3 +82,4 @@ for CLASS in range(11):
     f.write("\nAccuracy on test data: %0.4f" % score[1])
     f.write("\nLoss on test data: %0.4f" % score[0])
 
+    model_m.save("models/"+getbatch.labels[CLASS]+".model")
