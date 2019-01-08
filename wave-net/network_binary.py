@@ -45,8 +45,8 @@ model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(256, 2, strides = 2, activation='relu'))
 model_m.add(Flatten())
 
-#model_m.add(Dense(512))
-#model_m.add(Dropout(0.001))
+model_m.add(Dense(512))
+model_m.add(Dropout(0.001))
 model_m.add(Dense(num_classes, activation='sigmoid'))
 
 print(model_m.summary())
@@ -71,7 +71,7 @@ for CLASS in range(11):
     # Hyper-parameters
     TEST_SIZE = 10000
     STEPS_PER_EPOCH = 100
-    STEPS_PER_VAL = 100
+    STEPS_PER_VAL = 50
     EPOCHS = 1000
 
     res = model_m.fit_generator(getbatch.generator(EPOCHS*STEPS_PER_EPOCH,CLASS), epochs=EPOCHS, verbose=1,callbacks=callbacks_list, steps_per_epoch = STEPS_PER_EPOCH, validation_data = getbatch.val_generator(EPOCHS * STEPS_PER_VAL,CLASS), validation_steps=STEPS_PER_VAL)
