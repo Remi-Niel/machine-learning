@@ -53,7 +53,7 @@ for CLASS in range(11):
     # training stops early
     callbacks_list = [
         keras.callbacks.EarlyStopping(monitor='val_acc', patience=20, restore_best_weights = True, verbose = 1),
-	keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=2, min_lr=0.000001)
+	keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=5, min_lr=0.000001)
     ]
 
     model_m.compile(loss='binary_crossentropy',
