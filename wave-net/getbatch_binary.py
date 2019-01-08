@@ -32,7 +32,7 @@ def one_hot(label_array,num_classes):
 
 def getBatch(t, size = 100, train = True):
 	start = 0
-	end = 0.9
+	end = 0.95
 	if not train:
 		start = end
 		end = 1
