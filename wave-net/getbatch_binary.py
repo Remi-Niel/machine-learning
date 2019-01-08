@@ -30,7 +30,7 @@ def one_hot(label_array,num_classes):
 	x = label_array.astype(int)
 	return np.squeeze(np.eye(num_classes)[x.reshape(-1)])
 
-def getBatch(t, size = 100, train = True):
+def getBatch(t, size = 50, train = True):
 	start = 0
 	end = 0.9
 	if not train:
