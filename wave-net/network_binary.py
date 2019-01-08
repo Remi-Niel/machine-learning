@@ -27,22 +27,31 @@ model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(64, 2, strides = 1, activation='relu'))
 model_m.add(MaxPooling1D(2))
 
-model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(64, 2, strides = 1, activation='relu'))
 model_m.add(MaxPooling1D(2))
 
-model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(64, 2, strides = 1, activation='relu'))
 model_m.add(MaxPooling1D(2))
 
-model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(64, 2, strides = 1, activation='relu'))
 model_m.add(MaxPooling1D(2))
 
-model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(64, 2, strides = 1, activation='relu'))
 model_m.add(MaxPooling1D(2))
 
-model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(64, 2, strides = 1, activation='relu'))
 model_m.add(MaxPooling1D(2))
 
-model_m.add(Conv1D(256, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(64, 2, strides = 1, activation='relu'))
+model_m.add(MaxPooling1D(2))
+
+model_m.add(Conv1D(64, 2, strides = 1, activation='relu'))
+model_m.add(MaxPooling1D(2))
+
+model_m.add(Conv1D(64, 2, strides = 1, activation='relu'))
+model_m.add(MaxPooling1D(2))
+
+model_m.add(Conv1D(256, 2, strides = 1, activation='relu'))
 model_m.add(Flatten())
 
 #model_m.add(Dense(512))
