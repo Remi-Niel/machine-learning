@@ -82,4 +82,5 @@ for CLASS in range(11):
     f.write("\nAccuracy on test data: %0.4f" % score[1])
     f.write("\nLoss on test data: %0.4f" % score[0])
 
+    os.makedirs("models/")
     model_m.save("models/"+getbatch.labels[CLASS]+".model")
