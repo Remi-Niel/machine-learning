@@ -106,3 +106,6 @@ venv.bak/
 #Wav samples
 samples/
 data/
+
+#Models
+.model
