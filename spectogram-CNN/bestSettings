@@ -213,3 +213,610 @@ Acc on test data: -0.8913
 {'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
 
 Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
+Acc on test data: -0.8913 
+{'Conv2D': [3], 'Conv2D_1': [1], 'Conv2D_2': [0], 'Conv2D_3': [2], 'Conv2D_4': [1], 'Conv2D_5': [2], 'Conv2D_6': [4], 'Dense': [5], 'Dropout': [0.6454864730541423], 'conditional': [1], 'kernel_size': [2], 'kernel_size_1': [2], 'length': [1], 'optimizer': [2]}
+
+Network_binary
