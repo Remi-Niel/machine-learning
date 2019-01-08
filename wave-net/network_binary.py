@@ -27,26 +27,26 @@ model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 
-model_m.add(Conv1D(32, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 
-model_m.add(Conv1D(32, 2, strides = 2, activation='relu'))
-model_m.add(MaxPooling1D(2))
-
-model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
-model_m.add(MaxPooling1D(2))
-
-model_m.add(Conv1D(32, 2, strides = 2, activation='relu'))
-model_m.add(MaxPooling1D(2))
-
-model_m.add(Conv1D(32, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 
 model_m.add(Conv1D(256, 2, strides = 2, activation='relu'))
+model_m.add(MaxPooling1D(2))
+
+model_m.add(Conv1D(256, 2, strides = 2, activation='relu'))
+model_m.add(MaxPooling1D(2))
+
+model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
+model_m.add(MaxPooling1D(2))
+
+model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
 model_m.add(Flatten())
 
 model_m.add(Dense(512))
-model_m.add(Dropout(0.001))
+model_m.add(Dropout(0.1))
 model_m.add(Dense(num_classes, activation='sigmoid'))
 
 print(model_m.summary())
