@@ -21,10 +21,7 @@ input_shape = (TIME_PERIODS*num_sensors)
 # 1D CNN neural network
 model_m = Sequential()
 model_m.add(Reshape((TIME_PERIODS, num_sensors),  input_shape=(input_shape,)))
-model_m.add(Conv1D(64, 2, strides = 2, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
-model_m.add(MaxPooling1D(2))
-
-model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(32, 2, strides = 2, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
 model_m.add(MaxPooling1D(2))
 
 model_m.add(Conv1D(32, 2, strides = 2, activation='relu'))
@@ -33,7 +30,10 @@ model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(32, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 
-model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
+model_m.add(Conv1D(32, 2, strides = 2, activation='relu'))
+model_m.add(MaxPooling1D(2))
+
+model_m.add(Conv1D(32, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 
 model_m.add(Conv1D(32, 2, strides = 2, activation='relu'))
