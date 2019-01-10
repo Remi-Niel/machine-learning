@@ -2,31 +2,77 @@
 
 Network_binary
 
-Network_binary
+Class: cel
+Accuracy on test data: 0.8383
+Loss on test data: 0.7200
+
+Class: cla
+Accuracy on test data: 0.8104
+Loss on test data: 0.9275
+
+Class: flu
+Accuracy on test data: 0.7752
+Loss on test data: 1.1780
+
+Class: gac
+Accuracy on test data: 0.8641
+Loss on test data: 0.3853
+
+Class: gel
+Accuracy on test data: 0.8216
+Loss on test data: 0.4193
+
+Class: org
+Accuracy on test data: 0.8732
+Loss on test data: 0.5605
+
+Class: pia
+Accuracy on test data: 0.8780
+Loss on test data: 0.4643
+
+Class: sax
+Accuracy on test data: 0.7400
+Loss on test data: 1.1739
+
+Class: tru
+Accuracy on test data: 0.8586
+Loss on test data: 0.4210
+
+Class: vio
+Accuracy on test data: 0.8015
+Loss on test data: 0.5581
+
+Class: voi
+Accuracy on test data: 0.8636
+Loss on test data: 0.4219
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Network_binary
 
-Network_binary
+Class: cel
+Accuracy on test data: 0.8472
+Loss on test data: 0.3559
 
-Network_binary
-
-Network_binary
-
-Network_binary
-
-Network_binary
-
-
-
-Network_binary
-
-Network_binary
+Class: cla
+Accuracy on test data: 0.7921
+Loss on test data: 0.4695
 
 
 
 
-
-Network_binary
-
-Network_binary
 

@@ -21,16 +21,28 @@ IMSIZE = 128
 model_m = Sequential()
 model_m.add(Reshape((IMSIZE, IMSIZE,1),  input_shape=(IMSIZE,IMSIZE)))
 
-model_m.add(Conv2D(32, kernel_size = 3, activation='relu', padding = 'same'))
-model_m.add(Conv2D(32, kernel_size = 3, activation='relu', padding = 'same'))
+model_m.add(Conv2D(64, kernel_size = 7, activation='relu', padding = 'same'))
 model_m.add(MaxPooling2D(2))    
-model_m.add(Conv2D(64, kernel_size = 3, activation='relu', padding = 'same'))
-model_m.add(Conv2D(64, kernel_size = 3, activation='relu', padding = 'same'))
+
+model_m.add(Conv2D(64, kernel_size = 7, activation='relu', padding = 'same'))
 model_m.add(MaxPooling2D(2))
+
+model_m.add(Conv2D(128, kernel_size = 3, activation='relu', padding = 'same'))
+model_m.add(MaxPooling2D(2))   
+
+model_m.add(Conv2D(128, kernel_size = 3, activation='relu', padding = 'same'))
+model_m.add(MaxPooling2D(2))
+
+model_m.add(Conv2D(256, kernel_size = 3, activation='relu', padding = 'same')) 
+model_m.add(MaxPooling2D(2))   
+
+model_m.add(Conv2D(256, kernel_size = 3, activation='relu', padding = 'same'))
+
 model_m.add(Flatten())
 
-model_m.add(Dense(2048))
+model_m.add(Dense(512))
 model_m.add(Dropout(0.5))
+
 model_m.add(Dense(num_classes, activation='sigmoid'))
 print(model_m.summary())
 
@@ -45,8 +57,8 @@ for CLASS in range(11):
     # if it fails to improve for ten consecutive epochs,
     # training stops early
     callbacks_list = [
-        keras.callbacks.EarlyStopping(monitor='val_acc', patience=20, restore_best_weights = True, verbose = 1),
-	keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=5, min_lr=0.000001)
+        keras.callbacks.EarlyStopping(monitor='val_acc', patience=5, restore_best_weights = True, verbose = 1),
+	keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=2, min_lr=0.000001)
     ]
 
     model_m.compile(loss='binary_crossentropy',
@@ -74,4 +86,6 @@ for CLASS in range(11):
     f.write("\n\nClass: " + getbatch.labels[CLASS])
     f.write("\nAccuracy on test data: %0.4f" % score[1])
     f.write("\nLoss on test data: %0.4f" % score[0])
+
+    model_m.save("models/"+getbatch.labels[CLASS]+".model")
 

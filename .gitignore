@@ -103,9 +103,13 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+#models
+.models
+
 #Wav samples
 samples/
 data/
+testing/
 
 #Models
 .model

@@ -1,5 +1,5 @@
 import numpy as np
-
+import os
 import keras
 from keras.optimizers import SGD
 from keras.models import Sequential
@@ -21,7 +21,7 @@ input_shape = (TIME_PERIODS*num_sensors)
 # 1D CNN neural network
 model_m = Sequential()
 model_m.add(Reshape((TIME_PERIODS, num_sensors),  input_shape=(input_shape,)))
-model_m.add(Conv1D(64, 2, strides = 2, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
+model_m.add(Conv1D(32, 2, strides = 2, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
@@ -43,7 +43,6 @@ model_m.add(Dense(num_classes, activation='sigmoid'))
 print(model_m.summary())
 
 # %%
-
 print("\n--- Fit the model ---\n")
 
 for CLASS in range(11):
@@ -82,5 +81,4 @@ for CLASS in range(11):
     f.write("\nAccuracy on test data: %0.4f" % score[1])
     f.write("\nLoss on test data: %0.4f" % score[0])
 
-    os.makedirs("models/")
     model_m.save("models/"+getbatch.labels[CLASS]+".model")
