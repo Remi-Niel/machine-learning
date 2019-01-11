@@ -14,7 +14,7 @@ def getinput(file_name):
 	(sample_rate, signal) = wavfile.read(file_name)
 	Nsamp = math.floor(len(signal)/44100)
 
-	inputs = []
+	inputs = np.zeros(Nsamp,44100)
 
 	mono = signal.sum(axis = 1) / 2
 
@@ -27,7 +27,7 @@ def getinput(file_name):
 
 	for i in range(Nsamp):
 		sample = signal[Nsamp*44100:(Nsamp + 1)*44100 - 1]
-		inputs.append(sample)
+		inputs[i,:] = sample
 	
 	return inputs
 
@@ -58,7 +58,10 @@ for model_file in model_files:
 		for i in range(len(labels)):
 			labels[i] = ''.join(labels[i].split())
 
-		inputs = getinput(wav_file)
+		input = getinput(wav_file)
+
+
+
 
 
 
