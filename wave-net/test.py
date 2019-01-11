@@ -89,6 +89,11 @@ for m in range(len(model_files)):
 				FP+=1
 			else:
 				FN+=1
+	print(TP)
+	print(FP)
+	print(TN)
+	print(FN)
+
 
 	print(label_set[m])
 	precision = TP / (TP + FP)
