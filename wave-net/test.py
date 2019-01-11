@@ -18,7 +18,7 @@ THRESHOLD = 0.5
 def getinput(file_name):
 	(sample_rate, signal) = wavfile.read(file_name)
 
-	Nsamp = math.floor(signal.shape[0]/44100)*2
+	Nsamp = math.floor(signal.shape[0]/44100)
 
 	inputs = np.zeros((int(Nsamp),44100))
 
@@ -32,7 +32,7 @@ def getinput(file_name):
 	mono = (mono - mean) / stddev
 
 	for i in range(Nsamp-1):
-		sample = mono[i*22050:(i + 2)*22050]
+		sample = mono[i*44100:(i + 1)*44100]
 		inputs[i,:] = sample
 	
 	return inputs
