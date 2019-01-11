@@ -91,7 +91,7 @@ for m in range(len(model_files)):
 			sumG += mean
 			Gcount += 1
 		else:
-			sumF += ground_truth
+			sumF += mean
 			Fcount += 1
 		#	print(mean)
 
