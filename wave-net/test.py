@@ -86,14 +86,14 @@ for m in range(len(model_files)):
 
 		if correct:
 			if prediction:
-				TP++
+				TP+=1
 			else:
-				TN++
+				TN+=1
 		else:
 			if prediction:
-				FP++
+				FP+=1
 			else:
-				FN++
+				FN+=1
 
 	print(label_set(m))
 	precision = TP / (TP + FP)
