@@ -56,7 +56,7 @@ for m in range(len(model_files)):
 	TN = 0
 	FN = 0
 
-	for idx in progressbar.progressbar(range(len(sample_files))): 
+	for idx in progressbar.progressbar(range(100)): 
 		wav_file = sample_files[idx]
 
 		txt_file=wav_file.replace(".wav",".txt")
