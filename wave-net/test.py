@@ -12,7 +12,7 @@ from keras import backend as K
 label_set = [x[1] for x in os.walk("data/")][0]
 label_set = sorted(label_set)
 
-THRESHOLD = 0.5
+THRESHOLD = 0.4
 
 
 def getinput(file_name):
