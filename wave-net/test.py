@@ -51,6 +51,10 @@ for m in range(len(model_files)):
 
 	model = load_model(model_files[m])
 
+	label = model_files[m].split("/")[1]
+	label = label.replace('.wav','')
+
+
 	TP = 0
 	FP = 0
 	TN = 0
@@ -77,8 +81,7 @@ for m in range(len(model_files)):
 		prediction = mean > THRESHOLD
 		ground_truth = label_set[m] in labels
 
-		if(ground_truth):
-			print(mean);
+		
 
 		correct = (prediction == ground_truth)
 
