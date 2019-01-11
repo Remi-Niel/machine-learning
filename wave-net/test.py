@@ -56,9 +56,7 @@ for m in range(len(model_files)):
 	TN = 0
 	FN = 0
 
-
-
-	for idx in (range(len(sample_files))): 
+	for idx in progressbar.progressbar(range(len(sample_files))): 
 		wav_file = sample_files[idx]
 
 		txt_file=wav_file.replace(".wav",".txt")
@@ -76,11 +74,6 @@ for m in range(len(model_files)):
 		predictions = model.predict(input)
 
 		mean = np.mean(predictions)
-		print(mean)
-		prediction = mean > THRESHOLD
-		print(label_set[m])
-		print(labels)
-		ground_truth = label_set[m] in labels
 
 		correct = ((mean > THRESHOLD) == (label_set[m] in labels))
 
@@ -93,7 +86,7 @@ for m in range(len(model_files)):
 			if prediction:
 				FP+=1
 			else:
-				FN+=1
+				FN+
 
 	print(label_set(m))
 	precision = TP / (TP + FP)
