@@ -30,8 +30,7 @@ def getinput(file_name):
 	print(len(mono))
 
 	for i in range(Nsamp-1):
-		sample = signal[Nsamp*44100:(Nsamp + 1)*44100 - 1]
-		print(len(signal))
+		sample = mono[Nsamp*44100:(Nsamp + 1)*44100 - 1]
 		inputs[i,:] = sample
 	
 	return inputs
