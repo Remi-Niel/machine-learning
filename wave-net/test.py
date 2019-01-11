@@ -46,7 +46,7 @@ def determineOptimalThreshold(groundTmean, groundFmean):
 def getinput(file_name):
 	(sample_rate, signal) = wavfile.read(file_name)
 
-	Nsamp = math.floor(signal.shape[0]/44100) / 2
+	Nsamp = math.floor(signal.shape[0]/44100) 
 
 	inputs = np.zeros((int(Nsamp),44100))
 
