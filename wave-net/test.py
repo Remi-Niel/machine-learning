@@ -54,7 +54,8 @@ for m in range(len(model_files)):
 	label = model_files[m].split("/")[1]
 	label = label.replace('.wav','')
 
-
+	print(label)
+	
 	TP = 0
 	FP = 0
 	TN = 0
