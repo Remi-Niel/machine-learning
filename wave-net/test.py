@@ -51,6 +51,13 @@ for m in range(len(model_files)):
 
 	model = load_model(model_files[m])
 
+	TP = 0
+	FP = 0
+	TN = 0
+	FN = 0
+
+
+
 	for idx in (range(len(sample_files))): 
 		wav_file = sample_files[idx]
 
@@ -75,13 +82,24 @@ for m in range(len(model_files)):
 		print(labels)
 		ground_truth = label_set[m] in labels
 
-		print(prediction == ground_truth)
-		print((mean > THRESHOLD) == (label_set[m] in labels))
+		correct = ((mean > THRESHOLD) == (label_set[m] in labels))
 
+		if correct:
+			if prediction:
+				TP++
+			else:
+				TN++
+		else:
+			if prediction:
+				FP++
+			else:
+				FN++
 
-
-
-
+	print(label_set(m))
+	precision = TP / (TP + FP)
+	recall = TP / (TP + FN)
+	print("Precision: " +str(precision))
+	print("Recall: " +str(recall))
 
 
 
