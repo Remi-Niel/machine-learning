@@ -90,7 +90,7 @@ for m in range(len(model_files)):
 			else:
 				FN+=1
 
-	print(label_set(m))
+	print(label_set[m])
 	precision = TP / (TP + FP)
 	recall = TP / (TP + FN)
 	print("Precision: " +str(precision))
