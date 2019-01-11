@@ -12,13 +12,13 @@ from keras import backend as K
 label_set = [x[1] for x in os.walk("data/")][0]
 label_set = sorted(label_set)
 
-THRESHOLD = 0.4
+THRESHOLD = 0.5
 
 
 def getinput(file_name):
 	(sample_rate, signal) = wavfile.read(file_name)
 
-	Nsamp = math.floor(signal.shape[0]/44100)
+	Nsamp = math.floor(signal.shape[0]/44100) / 2
 
 	inputs = np.zeros((int(Nsamp),44100))
 
@@ -32,7 +32,7 @@ def getinput(file_name):
 	mono = (mono - mean) / stddev
 
 	for i in range(Nsamp-1):
-		sample = mono[i*44100:(i + 1)*44100]
+		sample = mono[i*2*44100:(i * 2 + 1)*44100]
 		inputs[i,:] = sample
 	
 	return inputs
