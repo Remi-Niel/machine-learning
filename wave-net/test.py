@@ -51,7 +51,7 @@ for m in range(len(model_files)):
 
 	model = load_model(model_files[m])
 
-	for idx in progressbar.progressbar(range(len(sample_files))): 
+	for idx in (range(len(sample_files))): 
 		wav_file = sample_files[idx]
 
 		txt_file=wav_file.replace(".wav",".txt")
@@ -69,6 +69,7 @@ for m in range(len(model_files)):
 		predictions = model.predict(input)
 
 		mean = np.mean(predictions)
+		print(mean)
 		print((mean > THRESHOLD) == label_set(m) in labels)
 
 
