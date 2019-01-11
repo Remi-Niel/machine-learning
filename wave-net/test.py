@@ -72,6 +72,7 @@ for m in range(len(model_files)):
 		print(mean)
 		print(label_set[m])
 		print(labels)
+		print(label_set[m] in labels)
 		#print((mean > THRESHOLD) == label_set[m] in labels)
 
 
