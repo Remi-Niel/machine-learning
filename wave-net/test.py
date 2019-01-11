@@ -32,7 +32,7 @@ def getinput(file_name):
 	mono = (mono - mean) / stddev
 
 	for i in range(Nsamp-1):
-		sample = mono[i*22050:(i + 1)*44100]
+		sample = mono[i*22050:(i + 2)*22050]
 		inputs[i,:] = sample
 	
 	return inputs
