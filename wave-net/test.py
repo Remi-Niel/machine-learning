@@ -20,14 +20,14 @@ def determineOptimalThreshold(groundTmean, groundFmean):
 	best_FP = -1;
 	best_TN = -1;
 	best_FN = -1;
-	best_thresh
+	best_thresh = 0
 	for t in np.linspace(0,1,101):
 		TP = sum(1 for x in groundTmean if x >= t)
 		FN = len(groundTmean - TP)
 		FP = sum(1 for x in groundFmean if x >= t)
 		TN = len(groundFmean - FP)
 
-		if (TP / (TP + FP) + TP / (TP + FN)):
+		if ((TP / (TP + FP) + TP / (TP + FN)) > f):
 			best_TP = TP;
 			best_FP = FN;
 			best_TN = FP;
