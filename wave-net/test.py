@@ -14,6 +14,34 @@ label_set = sorted(label_set)
 
 THRESHOLD = 0.5
 
+def determineOptimalThreshold(groundTmean, groundFmean):
+	f = 0
+	best_TP = -1;
+	best_FP = -1;
+	best_TN = -1;
+	best_FN = -1;
+	best_thresh
+	for t in np.linspace(0,1,101):
+		TP = sum(1 for x in groundTmean if x >= t)
+		FN = len(groundTmean - TP)
+		FP = sum(1 for x in groundFmean if x >= t)
+		TN = len(groundFmean - FP)
+
+		if (TP / (TP + FP) + TP / (TP + FN)):
+			best_TP = TP;
+			best_FP = FN;
+			best_TN = FP;
+			best_FN = FN;
+			best_thresh = t
+
+	precision = best_TP / (best_TP + best_FP)
+	recall = best_TP / (best_TP + best_FN)
+	print("Precision: " +str(precision))
+	print("Recall: " +str(recall))
+
+	return best_thresh
+
+
 
 def getinput(file_name):
 	(sample_rate, signal) = wavfile.read(file_name)
@@ -56,6 +84,9 @@ for m in range(len(model_files)):
 
 	print(label)
 
+	meanGround = []
+	meanFalse = []
+
 	sumG = 0
 	sumF = 0
 	Gcount = 0
@@ -90,9 +121,11 @@ for m in range(len(model_files)):
 		if ground_truth:
 			sumG += mean
 			Gcount += 1
+			meanGround.append(mean)
 		else:
 			sumF += mean
 			Fcount += 1
+			meanFalse.append(mean)
 		#	print(mean)
 
 		correct = (prediction == ground_truth)
@@ -107,19 +140,20 @@ for m in range(len(model_files)):
 				FP+=1
 			else:
 				FN+=1
-	print(TP)
-	print(FP)
-	print(TN)
-	print(FN)
+	# print(TP)
+	# print(FP)
+	# print(TN)
+	# print(FN)
 
-	print(sumG/Gcount)
-	print(sumF/Fcount)
+	# print(sumG/Gcount)
+	# print(sumF/Fcount)
 
 	print(label_set[m])
-	precision = TP / (TP + FP)
-	recall = TP / (TP + FN)
-	print("Precision: " +str(precision))
-	print("Recall: " +str(recall))
+	determineOptimalThreshold(meanGround,meanFalse)
+	# precision = TP / (TP + FP)
+	# recall = TP / (TP + FN)
+	# print("Precision: " +str(precision))
+	# print("Recall: " +str(recall))
 
 
 
