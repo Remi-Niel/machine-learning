@@ -9,6 +9,8 @@ import keras
 from keras.models import load_model
 from keras import backend as K 
 
+THRESHOLD = 0.5
+
 
 def getinput(file_name):
 	(sample_rate, signal) = wavfile.read(file_name)
@@ -61,8 +63,10 @@ for model_file in model_files:
 
 		input = getinput(wav_file)
 
-		print(model.predict(input))
+		predictions = model.predict(input)
 
+		mean = np.mean(predictions)
+		print(mean > THRESHOLD)
 
 
 
