@@ -70,10 +70,12 @@ for m in range(len(model_files)):
 
 		mean = np.mean(predictions)
 		print(mean)
-		print(mean > THRESHOLD)
+		prediction = mean > THRESHOLD
 		print(label_set[m])
 		print(labels)
-		print(label_set[m] in labels)
+		ground_truth = label_set[m] in labels
+
+		print(prediction == ground_truth)
 		#print((mean > THRESHOLD) == label_set[m] in labels)
 
 
