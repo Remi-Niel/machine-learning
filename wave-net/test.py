@@ -76,7 +76,7 @@ for m in range(len(model_files)):
 		ground_truth = label_set[m] in labels
 
 		print(prediction == ground_truth)
-		print((mean > THRESHOLD) == label_set[m] in labels)
+		print((mean > THRESHOLD) == (label_set[m] in labels)
 
 
 
