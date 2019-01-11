@@ -56,6 +56,11 @@ for m in range(len(model_files)):
 
 	print(label)
 
+	sumG = 0
+	sumF = 0
+	Gcount = 0
+	Fcount = 0
+
 	TP = 0
 	FP = 0
 	TN = 0
@@ -82,7 +87,12 @@ for m in range(len(model_files)):
 		prediction = mean > THRESHOLD
 		ground_truth = label in labels
 
-		#if ground_truth:
+		if ground_truth:
+			sumG += ground_truth
+			Gcount += 1
+		else:
+			sumF += ground_truth
+			Fcount += 1
 		#	print(mean)
 
 		correct = (prediction == ground_truth)
@@ -102,6 +112,8 @@ for m in range(len(model_files)):
 	print(TN)
 	print(FN)
 
+	print(sumG/Gcount)
+	print(sumF/Fcount)
 
 	print(label_set[m])
 	precision = TP / (TP + FP)
