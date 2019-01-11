@@ -35,7 +35,7 @@ def determineOptimalThreshold(groundTmean, groundFmean):
 		print("\n")
 
 
-		if ((TP / (TP + FP) + TP / (TP + FN)) > f):
+		if ((TP / (TP + FP))> best_thresh):
 			best_TP = TP;
 			best_FP = FN;
 			best_TN = FP;
