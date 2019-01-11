@@ -61,6 +61,7 @@ for model_file in model_files:
 
 		input = getinput(wav_file)
 
+		print(model.predict(input))
 
 
 
