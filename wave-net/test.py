@@ -9,6 +9,9 @@ import keras
 from keras.models import load_model
 from keras import backend as K 
 
+label_set = [x[1] for x in os.walk("data/")][0]
+label_set = sorted(label_set)
+
 THRESHOLD = 0.5
 
 
@@ -42,11 +45,11 @@ model_files = glob.glob("models/*.model", recursive = True)
 
 model = []
 
-for model_file in model_files:
+for m in range(len(model_files)):
 	del model
 	K.clear_session()
 
-	model = load_model(model_file)
+	model = load_model(model_files[m])
 
 	for idx in progressbar.progressbar(range(len(sample_files))): 
 		wav_file = sample_files[idx]
@@ -66,7 +69,7 @@ for model_file in model_files:
 		predictions = model.predict(input)
 
 		mean = np.mean(predictions)
-		print(mean > THRESHOLD)
+		print((mean > THRESHOLD) == label_set(m) in labels)
 
 
 
