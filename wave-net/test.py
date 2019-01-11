@@ -13,7 +13,6 @@ from keras import backend as K
 def getinput(file_name):
 	(sample_rate, signal) = wavfile.read(file_name)
 
-	print(signal.shape)
 	Nsamp = math.floor(signal.shape[0]/44100)
 
 	inputs = np.zeros((int(Nsamp),44100))
