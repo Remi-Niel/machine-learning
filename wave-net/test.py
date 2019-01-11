@@ -151,7 +151,7 @@ for m in range(len(model_files)):
 	# print(sumG/Gcount)
 	# print(sumF/Fcount)
 
-	print(label_set[m])
+	print(label)
 	determineOptimalThreshold(meanGround,meanFalse)
 	# precision = TP / (TP + FP)
 	# recall = TP / (TP + FN)
