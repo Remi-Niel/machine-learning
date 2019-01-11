@@ -35,12 +35,13 @@ def determineOptimalThreshold(groundTmean, groundFmean):
 		print("\n")
 
 
-		if ((TP / (TP + FP))> best_thresh):
+		if ((TP / (TP + FP))> f):
 			best_TP = TP;
 			best_FP = FN;
 			best_TN = FP;
 			best_FN = FN;
 			best_thresh = t
+			f = (TP / (TP + FP))
 
 	precision = best_TP / (best_TP + best_FP)
 	recall = best_TP / (best_TP + best_FN)
