@@ -82,7 +82,8 @@ for m in range(len(model_files)):
 		prediction = mean > THRESHOLD
 		ground_truth = label in labels
 
-		
+		if ground_truth:
+			print(mean)
 
 		correct = (prediction == ground_truth)
 
