@@ -88,7 +88,7 @@ for m in range(len(model_files)):
 		ground_truth = label in labels
 
 		if ground_truth:
-			sumG += ground_truth
+			sumG += mean
 			Gcount += 1
 		else:
 			sumF += ground_truth
