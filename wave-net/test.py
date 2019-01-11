@@ -27,6 +27,11 @@ def determineOptimalThreshold(groundTmean, groundFmean):
 		FP = max(1,sum(1 for x in groundFmean if x >= t))
 		TN = max(1,len(groundFmean) - FP)
 
+		print(TP)
+		print(FP)
+		print(TN)
+		print(FN)
+		print("\n")
 
 
 		if ((TP / (TP + FP) + TP / (TP + FN)) > f):
