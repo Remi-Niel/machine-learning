@@ -35,7 +35,6 @@ def determineOptimalThreshold(groundTmean, groundFmean):
 			best_FN = FN;
 			best_thresh = t
 			f = tmp 
-			print(f)
 
 	precision = best_TP / (best_TP + best_FP)
 	recall = best_TP / (best_TP + best_FN)
