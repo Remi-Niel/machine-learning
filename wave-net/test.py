@@ -74,8 +74,12 @@ for m in range(len(model_files)):
 		predictions = model.predict(input)
 
 		mean = np.mean(predictions)
+		prediction = mean > THRESHOLD
+		print(label_set[m])
+		print(labels)
+		ground_truth = label_set[m] in labels
 
-		correct = ((mean > THRESHOLD) == (label_set[m] in labels))
+		correct = (prediction == ground_truth)
 
 		if correct:
 			if prediction:
