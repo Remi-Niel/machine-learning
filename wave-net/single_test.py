@@ -12,7 +12,7 @@ from keras import backend as K
 from tensorflow import Session
 import getbatch_binary as getbatch
 
-label_set = getbatch.labels;Z
+label_set = getbatch.labels;
 
 def determineOptimalThreshold(groundTmean, groundFmean):
 	f = 0
@@ -76,7 +76,7 @@ def determineOptimalThreshold(groundTmean, groundFmean):
 	
 # 	return inputs
 
-	
+
 def getinput(file_name, nSamp = 100):
 	(sample_rate, signal) = wavfile.read(file_name)
 	mono = signal.sum(axis = 1) / 2
