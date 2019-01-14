@@ -108,7 +108,10 @@ for idx in progressbar.progressbar(range(len(sample_files))):
 
 	prediction = model.predict(input)
 
+	summed = np.sum(prediction, axis = 1)
+
 	print(prediction)
+	print(summed)
 
 
 	# label = model_files[bestGuess].split("/")[1]
