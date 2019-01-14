@@ -58,27 +58,11 @@ def determineOptimalThreshold(groundTmean, groundFmean):
 
 	return best_thresh
 
-# def getinput(file_name, Nsamp = 5):
-# 	(sample_rate, signal) = wavfile.read(file_name)
-
-# 	Nsamp = min(math.floor(signal.shape[0]/44100), Nsamp) 
-
-# 	mono = signal.sum(axis = 1) / 2
-
-# 	mean = np.mean(mono) # is about zero
-# 	stddev = np.std(mono)
-# 	if stddev == 0:
-# 		stddev = 1
-
-# 	mono = (mono - mean) / stddev
-
-# 	inputs = np.resize(mono,Nsamp*44100).reshape(-1,44100)
-	
-# 	return inputs
-
-
-def getinput(file_name, nSamp = 100):
+def getinput(file_name, Nsamp = 100):
 	(sample_rate, signal) = wavfile.read(file_name)
+
+	Nsamp = min(math.floor(signal.shape[0]/44100), Nsamp) 
+
 	mono = signal.sum(axis = 1) / 2
 
 	mean = np.mean(mono) # is about zero
@@ -88,15 +72,31 @@ def getinput(file_name, nSamp = 100):
 
 	mono = (mono - mean) / stddev
 
-	inputs = np.zeros((nSamp,44100))
-
-	for i in range(nSamp):
-		tmp = random.randint(0, len(mono)-44100 - 1)
-		sample = mono[tmp:tmp+44100]
-		#sample = mono[i*44100:(i + 1)*44100]
-		inputs[i,:] = sample
+	inputs = np.resize(mono,Nsamp*44100).reshape(-1,44100)
 	
 	return inputs
+
+
+# def getinput(file_name, nSamp = 100):
+# 	(sample_rate, signal) = wavfile.read(file_name)
+# 	mono = signal.sum(axis = 1) / 2
+
+# 	mean = np.mean(mono) # is about zero
+# 	stddev = np.std(mono)
+# 	if stddev == 0:
+# 		stddev = 1
+
+# 	mono = (mono - mean) / stddev
+
+# 	inputs = np.zeros((nSamp,44100))
+
+# 	for i in range(nSamp):
+# 		tmp = random.randint(0, len(mono)-44100 - 1)
+# 		sample = mono[tmp:tmp+44100]
+# 		#sample = mono[i*44100:(i + 1)*44100]
+# 		inputs[i,:] = sample
+	
+# 	return inputs
 
 directory = 'testing/'
 
