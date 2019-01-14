@@ -10,11 +10,9 @@ import random
 from keras.models import load_model
 from keras import backend as K 
 from tensorflow import Session
+import getbatch_binary as getbatch
 
-label_set = [x[1] for x in os.walk("data/")][0]
-label_set = sorted(label_set)
-
-THRESHOLD = 0.5
+label_set = getbatch.labels;
 
 def determineOptimalThreshold(groundTmean, groundFmean):
 	f = 0
@@ -110,14 +108,11 @@ for idx in progressbar.progressbar(range(len(sample_files))):
 
 	summed = np.sum(prediction, axis = 0)
 
-	print(prediction)
-	print(summed)
+	best = np.argmax(summed)
 
-
-	# label = model_files[bestGuess].split("/")[1]
-	# label = label.replace('.model','')
-	# if label in labels:
-	# 	correct += 1
+	label = label_set[best]
+	if label in labels:
+		correct += 1
 
 acc = correct / len(sample_files);
 print("Accuracy: " + str(acc)) 
