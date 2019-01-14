@@ -20,7 +20,7 @@ num_sensors = 1
 input_shape = (TIME_PERIODS*num_sensors)
 
 # 1D CNN neural network
-num_classes = 1 #True/False
+num_classes = 11 #True/False
 IMSIZE = 128
 
 # 1D CNN neural network
