@@ -49,7 +49,7 @@ def getBatch(size = 150, train = True):
 	label_indexes = {labels[i]: i for i in range(0,NUM_LABELS)} #testing labels
 	#print(label_indexes)
 
-	data = np.zeros((size,44100))
+	data = np.zeros((int(size), IMSIZE, IMSIZE))
 	labels = []
 
 
