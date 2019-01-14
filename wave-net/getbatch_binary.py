@@ -50,11 +50,10 @@ def getBatch(t, size = 100, train = True):
 
 	for i in range(size):
 		file_name = ""
-		if random.randint(0,1):
+		if False:
 			file_name = sample_files[t][random.randint(int(start * length_cat[t]), int(end * length_cat[t] - 1))]
 		else:
 			possible = list(range(NUM_LABELS));
-			possible.remove(t);
 			chosen = random.choice(possible);
 			file_name = sample_files[chosen][random.randint(int(start * length_cat[chosen]), int(end * length_cat[chosen] - 1))]
 			
