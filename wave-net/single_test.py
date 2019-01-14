@@ -108,7 +108,7 @@ for idx in progressbar.progressbar(range(len(sample_files))):
 
 	prediction = model.predict(input)
 
-	summed = np.sum(prediction, axis = 1)
+	summed = np.sum(prediction, axis = 0)
 
 	print(prediction)
 	print(summed)
