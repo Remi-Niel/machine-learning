@@ -205,3 +205,193 @@ Network_binary
 Network_binary
 
 Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Class: cel
+Accuracy on test data: 0.8400
+Loss on test data: 0.4000
+
+Network_binary
+
+Network_binary
+
+Class: cel
+Accuracy on test data: 0.8385
+Loss on test data: 0.5299
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+
+
+Network_binary
+
+Network_binary
+
+Class: cel
+Accuracy on test data: 0.8067
+Loss on test data: 0.4255
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Class: cel
+Accuracy on test data: 0.8579
+Loss on test data: 0.3663
+
+Network_binary
+
+Network_binary
+
+Class: cel
+Accuracy on test data: 0.8625
+Loss on test data: 0.4115
+
+Class: cla
+Accuracy on test data: 0.8418
+Loss on test data: 0.4269
+
+Class: flu
+Accuracy on test data: 0.7845
+Loss on test data: 0.5549
+
+Class: gac
+Accuracy on test data: 0.8730
+Loss on test data: 0.3061
+
+Class: gel
+Accuracy on test data: 0.8232
+Loss on test data: 0.5282
+
+Class: org
+Accuracy on test data: 0.8208
+Loss on test data: 0.4571
+
+Class: pia
+Accuracy on test data: 0.8742
+Loss on test data: 0.3580
+
+Class: sax
+Accuracy on test data: 0.7840
+Loss on test data: 0.4746
+
+Class: tru
+Accuracy on test data: 0.8801
+Loss on test data: 0.3428
+
+Class: vio
+Accuracy on test data: 0.7998
+Loss on test data: 0.4833
+
+Class: voi
+Accuracy on test data: 0.8903
+Loss on test data: 0.2805
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+
+
+Network_binary
+
+Network_binary
+
+Network_multi
+
+Network_multi
+Accuracy on test data: 0.5507
+Loss on test data: 1.3350
+
+Network_multi
+
+Network_binary
+
+Network_binary
+
+Network_binary
+Accuracy on test data: 0.7942
+Loss on test data: 0.6018

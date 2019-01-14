@@ -6,6 +6,7 @@ import numpy as np
 from scipy.io import wavfile
 import math
 import keras
+import random
 from keras.models import load_model
 from keras import backend as K 
 
@@ -22,19 +23,33 @@ def determineOptimalThreshold(groundTmean, groundFmean):
 	best_FN = -1;
 	best_thresh = 0
 	for t in np.linspace(0.1,.9,81):
-		TP = max(1,sum(1 for x in groundTmean if x >= t))
-		FN = max(1,len(groundTmean) - TP)
-		FP = max(1,sum(1 for x in groundFmean if x >= t))
-		TN = max(1,len(groundFmean) - FP)
+		TP = sum(1 for x in groundTmean if x >= t)
+		FN = len(groundTmean) - TP
+		FP = sum(1 for x in groundFmean if x >= t)
+		TN = len(groundFmean) - FP
 
-		tmp = (TP / (TP + FP)) * (TP / (TP + FN));
-		if (tmp > f):
+		precision = 0;
+		recall = 0;
+
+		if(FP == 0):
+			precision = 1.0
+		else:
+			precision = TP / (TP + FP)
+			
+
+		if(FN == 0):
+			recall = 1.0
+		else:
+			recall = TP / (TP + FN)
+			
+		score = precision * recall;
+		if (score > f):
 			best_TP = TP;
 			best_FP = FP;
 			best_TN = TN;
 			best_FN = FN;
 			best_thresh = t
-			f = tmp 
+			f = score 
 
 	precision = best_TP / (best_TP + best_FP)
 	recall = best_TP / (best_TP + best_FN)
@@ -44,14 +59,10 @@ def determineOptimalThreshold(groundTmean, groundFmean):
 
 	return best_thresh
 
-
-
-def getinput(file_name):
+def getinput(file_name, Nsamp = 5):
 	(sample_rate, signal) = wavfile.read(file_name)
 
-	Nsamp = math.floor(signal.shape[0]/44100) 
-
-	inputs = np.zeros((int(Nsamp),44100))
+	Nsamp = min(math.floor(signal.shape[0]/44100), Nsamp) 
 
 	mono = signal.sum(axis = 1) / 2
 
@@ -62,11 +73,30 @@ def getinput(file_name):
 
 	mono = (mono - mean) / stddev
 
-	for i in range(Nsamp-1):
-		sample = mono[i*44100:(i + 1)*44100]
-		inputs[i,:] = sample
+	inputs = np.resize(mono,Nsamp*44100).reshape(-1,44100)
 	
 	return inputs
+
+# def getinput(file_name, nSamp = 100):
+# 	(sample_rate, signal) = wavfile.read(file_name)
+# 	mono = signal.sum(axis = 1) / 2
+
+# 	mean = np.mean(mono) # is about zero
+# 	stddev = np.std(mono)
+# 	if stddev == 0:
+# 		stddev = 1
+
+# 	mono = (mono - mean) / stddev
+
+# 	inputs = np.zeros((nSamp,44100))
+
+# 	for i in range(nSamp):
+# 		tmp = random.randint(0, len(mono)-44100 - 1)
+# 		sample = mono[tmp:tmp+44100]
+# 		#sample = mono[i*44100:(i + 1)*44100]
+# 		inputs[i,:] = sample
+	
+# 	return inputs
 
 directory = 'testing/'
 
@@ -148,8 +178,8 @@ for m in range(len(model_files)):
 	# print(TN)
 	# print(FN)
 
-	# print(sumG/Gcount)
-	# print(sumF/Fcount)
+	print(sumG/Gcount)
+	print(sumF/Fcount)
 
 	print(label)
 	determineOptimalThreshold(meanGround,meanFalse)

@@ -1,5 +1,6 @@
 import numpy as np
 import os
+import progressbar
 import keras
 from keras.optimizers import SGD
 from keras.models import Sequential
@@ -21,12 +22,13 @@ input_shape = (TIME_PERIODS*num_sensors)
 # 1D CNN neural network
 model_m = Sequential()
 model_m.add(Reshape((TIME_PERIODS, num_sensors),  input_shape=(input_shape,)))
-model_m.add(Conv1D(32, 2, strides = 2, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
+model_m.add(Conv1D(64, 2, strides = 2, activation='relu', input_shape=(TIME_PERIODS, num_sensors)))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(64, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
+model_m.add(Conv1D(32, 2, strides = 1, activation='relu'))
 model_m.add(Conv1D(128, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(256, 2, strides = 2, activation='relu'))
@@ -34,10 +36,8 @@ model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(256, 2, strides = 2, activation='relu'))
 model_m.add(MaxPooling1D(2))
 model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
-model_m.add(MaxPooling1D(2))
-model_m.add(Conv1D(512, 2, strides = 2, activation='relu'))
 model_m.add(Flatten())
-model_m.add(Dense(1024))
+model_m.add(Dense(512))
 model_m.add(Dropout(0.5))
 model_m.add(Dense(num_classes, activation='sigmoid'))
 print(model_m.summary())
@@ -45,14 +45,14 @@ print(model_m.summary())
 # %%
 print("\n--- Fit the model ---\n")
 
-for CLASS in range(11):
+for CLASS in progressbar.progressbar(range(11)):
     print("\nClass: " + getbatch.labels[CLASS])	
     # The EarlyStopping callback monitors training accuracy:
     # if it fails to improve for ten consecutive epochs,
     # training stops early
     callbacks_list = [
         keras.callbacks.EarlyStopping(monitor='val_acc', patience=20, restore_best_weights = True, verbose = 1),
-	keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=2, min_lr=0.000001)
+	keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=5, min_lr=0.000001)
     ]
 
     model_m.compile(loss='binary_crossentropy',
