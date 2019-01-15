@@ -31,9 +31,6 @@ model_m.add(Conv2D(128, kernel_size = 3, activation='relu', padding = 'valid'))
 model_m.add(MaxPooling2D(2))   
 
 model_m.add(Conv2D(128, kernel_size = 3, activation='relu', padding = 'valid'))
-model_m.add(MaxPooling2D(2))
-
-model_m.add(Conv2D(256, kernel_size = 3, activation='relu', padding = 'valid')) 
 
 model_m.add(Flatten())
 
