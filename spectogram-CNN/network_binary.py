@@ -21,16 +21,16 @@ IMSIZE = 64
 model_m = Sequential()
 model_m.add(Reshape((IMSIZE, IMSIZE,1),  input_shape=(IMSIZE,IMSIZE)))
 
-model_m.add(Conv2D(32, kernel_size = 3, activation='relu', padding = 'valid'))
+model_m.add(Conv2D(16, kernel_size = 3, activation='relu', padding = 'valid'))
 model_m.add(MaxPooling2D(2))    
 
-model_m.add(Conv2D(32, kernel_size = 3, activation='relu', padding = 'valid'))
+model_m.add(Conv2D(16, kernel_size = 3, activation='relu', padding = 'valid'))
 model_m.add(MaxPooling2D(2))
 
-model_m.add(Conv2D(64, kernel_size = 3, activation='relu', padding = 'valid'))
+model_m.add(Conv2D(32, kernel_size = 3, activation='relu', padding = 'valid'))
 model_m.add(MaxPooling2D(2))   
 
-model_m.add(Conv2D(64, kernel_size = 3, activation='relu', padding = 'valid'))
+model_m.add(Conv2D(32, kernel_size = 3, activation='relu', padding = 'valid'))
 
 model_m.add(Flatten())
 
