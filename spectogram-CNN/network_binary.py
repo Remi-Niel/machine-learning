@@ -15,19 +15,30 @@ f.write("\n")
 f.write("Network_binary")
 
 num_classes = 1 #True/False
-IMSIZE = 16
+IMSIZE = 128
 
 # 1D CNN neural network
 model_m = Sequential()
 model_m.add(Reshape((IMSIZE, IMSIZE,1),  input_shape=(IMSIZE,IMSIZE)))
 
-model_m.add(Conv2D(64, kernel_size = 3, activation='relu', padding = 'same'))
+model_m.add(Conv2D(64, kernel_size = 7, activation='relu', padding = 'same'))
 model_m.add(MaxPooling2D(2))    
 
-model_m.add(Conv2D(64, kernel_size = 3, activation='relu', padding = 'same'))
+model_m.add(Conv2D(64, kernel_size = 7, activation='relu', padding = 'same'))
 model_m.add(MaxPooling2D(2))
 
 model_m.add(Conv2D(128, kernel_size = 3, activation='relu', padding = 'same'))
+model_m.add(MaxPooling2D(2))   
+
+model_m.add(Conv2D(128, kernel_size = 3, activation='relu', padding = 'same'))
+model_m.add(MaxPooling2D(2))
+
+model_m.add(Conv2D(256, kernel_size = 3, activation='relu', padding = 'same')) 
+model_m.add(MaxPooling2D(2))   
+
+model_m.add(Conv2D(256, kernel_size = 3, activation='relu', padding = 'same'))
+
+model_m.add(Flatten())
 
 model_m.add(Dense(512))
 model_m.add(Dropout(0.5))
