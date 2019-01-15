@@ -15,19 +15,28 @@ f.write("\n")
 f.write("Network_binary")
 
 num_classes = 1 #True/False
-IMSIZE = 32
+IMSIZE = 128
 
 # 1D CNN neural network
 model_m = Sequential()
 model_m.add(Reshape((IMSIZE, IMSIZE,1),  input_shape=(IMSIZE,IMSIZE)))
 
-model_m.add(Conv2D(16, kernel_size = 3, activation='relu', padding = 'valid'))
+model_m.add(Conv2D(64, kernel_size = 7, activation='relu', padding = 'same'))
 model_m.add(MaxPooling2D(2))    
 
-model_m.add(Conv2D(16, kernel_size = 3, activation='relu', padding = 'valid'))
+model_m.add(Conv2D(64, kernel_size = 7, activation='relu', padding = 'same'))
 model_m.add(MaxPooling2D(2))
 
-model_m.add(Conv2D(32, kernel_size = 3, activation='relu', padding = 'valid'))
+model_m.add(Conv2D(128, kernel_size = 3, activation='relu', padding = 'same'))
+model_m.add(MaxPooling2D(2))   
+
+model_m.add(Conv2D(128, kernel_size = 3, activation='relu', padding = 'same'))
+model_m.add(MaxPooling2D(2))
+
+model_m.add(Conv2D(256, kernel_size = 3, activation='relu', padding = 'same')) 
+model_m.add(MaxPooling2D(2))   
+
+model_m.add(Conv2D(256, kernel_size = 3, activation='relu', padding = 'same'))
 
 model_m.add(Flatten())
 
@@ -48,8 +57,8 @@ for CLASS in range(11):
     # if it fails to improve for ten consecutive epochs,
     # training stops early
     callbacks_list = [
-        keras.callbacks.EarlyStopping(monitor='val_acc', patience=20, restore_best_weights = True, verbose = 1),
-	keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=5, min_lr=0.000001)
+        keras.callbacks.EarlyStopping(monitor='val_acc', patience=5, restore_best_weights = True, verbose = 1),
+	keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=2, min_lr=0.000001)
     ]
 
     model_m.compile(loss='binary_crossentropy',
