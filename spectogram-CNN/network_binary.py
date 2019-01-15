@@ -15,7 +15,7 @@ f.write("\n")
 f.write("Network_binary")
 
 num_classes = 1 #True/False
-IMSIZE = 64
+IMSIZE = 32
 
 # 1D CNN neural network
 model_m = Sequential()
