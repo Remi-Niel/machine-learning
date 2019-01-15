@@ -58,6 +58,7 @@ def determineOptimalThreshold(groundTmean, groundFmean):
 
 	return best_thresh
 
+
 def getinput(file_name, Nsamp = 100):
 	(sample_rate, signal) = wavfile.read(file_name)
 
@@ -72,19 +73,7 @@ def getinput(file_name, Nsamp = 100):
 
 	mono = (mono - mean) / stddev
 
-	IMSIZE = 128
-
-	inputs = np.zeros((int(size), IMSIZE, IMSIZE))
-
-
-	for i in range(Nsamp) :
-		subsample = mono(Nsamp*44100:(Nsamp+1)*44100)
-
-		spec = mlab.specgram(mono, Fs = 44100)[0]
-
-		spec = scipy.misc.imresize(spec, [IMSIZE,IMSIZE])
-
-		inputs[i,:,:] = spec
+	inputs = np.resize(mono,Nsamp*44100).reshape(-1,44100)
 	
 	return inputs
 

@@ -76,3 +76,60 @@ Loss on test data: 0.4695
 
 
 
+
+
+Network_binary
+
+Network_binary
+
+Network_binary
+
+Network_binary
+Accuracy on test data: 0.9835
+Loss on test data: 0.0562
+
+Network_binary
+
+Class: cel
+Accuracy on test data: 0.8298
+Loss on test data: 0.6751
+
+Class: cla
+Accuracy on test data: 0.8159
+Loss on test data: 0.7892
+
+Class: flu
+Accuracy on test data: 0.7854
+Loss on test data: 0.8521
+
+Class: gac
+Accuracy on test data: 0.8714
+Loss on test data: 0.3126
+
+Class: gel
+Accuracy on test data: 0.8278
+Loss on test data: 0.4377
+
+Class: org
+Accuracy on test data: 0.8565
+Loss on test data: 0.6007
+
+Class: pia
+Accuracy on test data: 0.8820
+Loss on test data: 0.4344
+
+Class: sax
+Accuracy on test data: 0.7396
+Loss on test data: 0.9235
+
+
+
+Network_binary
+
+Class: cel
+Accuracy on test data: 0.8507
+Loss on test data: 0.4111
+
+Class: cla
+Accuracy on test data: 0.8129
+Loss on test data: 0.9411

@@ -32,9 +32,9 @@ def one_hot(label_array,num_classes):
 
 def getBatch(size = 150, train = True):
 	start = 0
-	end = 0.8
+	end = 0.9
 	if not train:
-		start = 0.8
+		start = 0.9
 		end = 1
 
 	labels = [x[1] for x in os.walk(directory)][0] #['piano','violin']
@@ -47,8 +47,6 @@ def getBatch(size = 150, train = True):
 
 	data = np.zeros((size,44100))
 	labels = []
-
-
 
 	sample_files = glob.glob(directory+'/*/*.wav',recursive=True)
 	shuffle(sample_files)

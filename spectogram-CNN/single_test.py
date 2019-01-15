@@ -4,6 +4,8 @@ import sys
 import progressbar
 import numpy as np
 from scipy.io import wavfile
+import scipy
+from matplotlib import mlab
 import math
 import keras
 import random
@@ -12,51 +14,6 @@ from keras import backend as K
 from tensorflow import Session
 import getbatch_binary as getbatch
 
-label_set = getbatch.labels;
-
-def determineOptimalThreshold(groundTmean, groundFmean):
-	f = 0
-	best_TP = -1;
-	best_FP = -1;
-	best_TN = -1;
-	best_FN = -1;
-	best_thresh = 0
-	for t in np.linspace(0.1,.9,81):
-		TP = sum(1 for x in groundTmean if x >= t)
-		FN = len(groundTmean) - TP
-		FP = sum(1 for x in groundFmean if x >= t)
-		TN = len(groundFmean) - FP
-
-		precision = 0;
-		recall = 0;
-
-		if(FP == 0):
-			precision = 1.0
-		else:
-			precision = TP / (TP + FP)
-			
-
-		if(FN == 0):
-			recall = 1.0
-		else:
-			recall = TP / (TP + FN)
-			
-		score = precision * recall;
-		if (score > f):
-			best_TP = TP;
-			best_FP = FP;
-			best_TN = TN;
-			best_FN = FN;
-			best_thresh = t
-			f = score 
-
-	precision = best_TP / (best_TP + best_FP)
-	recall = best_TP / (best_TP + best_FN)
-	print(best_thresh)
-	print("Precision: " +str(precision))
-	print("Recall: " +str(recall))
-
-	return best_thresh
 
 def getinput(file_name, Nsamp = 100):
 	(sample_rate, signal) = wavfile.read(file_name)
@@ -72,7 +29,21 @@ def getinput(file_name, Nsamp = 100):
 
 	mono = (mono - mean) / stddev
 
-	inputs = np.resize(mono,Nsamp*44100).reshape(-1,44100)
+	
+
+	IMSIZE = 128
+
+	inputs = np.zeros((int(Nsamp), IMSIZE, IMSIZE))
+
+
+	for i in range(Nsamp) :
+		subsample = mono[(i*44100):(i+1)*44100]
+
+		spec = mlab.specgram(subsample, Fs = 44100)[0]
+
+		spec = scipy.misc.imresize(spec, [IMSIZE,IMSIZE])
+
+		inputs[i,:,:] = spec
 	
 	return inputs
 
@@ -87,26 +58,29 @@ def getinput(file_name, Nsamp = 100):
 # 		stddev = 1
 
 # 	mono = (mono - mean) / stddev
+	
+# 	IMSIZE = 128
 
-# 	inputs = np.zeros((nSamp,44100))
+# 	inputs = np.zeros((nSamp, IMSIZE, IMSIZE))
 
 # 	for i in range(nSamp):
 # 		tmp = random.randint(0, len(mono)-44100 - 1)
 # 		sample = mono[tmp:tmp+44100]
-# 		#sample = mono[i*44100:(i + 1)*44100]
-# 		inputs[i,:] = sample
+# 		spec = mlab.specgram(sample, Fs = 44100)[0]
+
+# 		spec = scipy.misc.imresize(spec, [IMSIZE,IMSIZE])
+
+# 		inputs[i,:,:] = spec
 	
 # 	return inputs
 
-directory = 'testing/'
-
 sample_files = glob.glob("testing/*.wav", recursive = True)
-
-model_files = glob.glob("models/*.model", recursive = True)
 
 correct = 0;
 
 model = load_model("multi_model/model.model")
+
+label_set = getbatch.labels;
 
 for idx in progressbar.progressbar(range(len(sample_files))): 
 	wav_file = sample_files[idx]
@@ -130,11 +104,22 @@ for idx in progressbar.progressbar(range(len(sample_files))):
 
 	summed = np.sum(prediction, axis = 0)
 
+	# print(summed)
+
 	best = np.argmax(summed)
 
 	label = label_set[best]
+
+	# print(best)
+	# print(label)
+	# print(labels)
+
 	if label in labels:
 		correct += 1
+
+	if(idx%100 == 0 and idx > 0):
+		print(correct/idx)
+
 
 acc = correct / len(sample_files);
 print("Accuracy: " + str(acc)) 

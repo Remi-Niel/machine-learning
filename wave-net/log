@@ -395,3 +395,5 @@ Network_binary
 Network_binary
 Accuracy on test data: 0.7942
 Loss on test data: 0.6018
+
+Network_binary
