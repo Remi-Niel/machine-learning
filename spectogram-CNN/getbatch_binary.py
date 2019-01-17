@@ -11,7 +11,7 @@ import numpy as np
 import sys
 
 directory = 'data/'
-IMSIZE = 16
+IMSIZE = 128
 
 labels = [x[1] for x in os.walk(directory)][0] #['piano','violin']
 labels = sorted(labels)     #consistend label numbers 
@@ -41,7 +41,7 @@ def one_hot(label_array,num_classes):
 
 def getBatch(t, size = 150, train = True):
 	start = 0
-	end = 0.8
+	end = 0.9
 	if not train:
 		start = end
 		end = 1
