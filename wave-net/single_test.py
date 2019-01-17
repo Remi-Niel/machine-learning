@@ -14,51 +14,6 @@ import getbatch_binary as getbatch
 
 label_set = getbatch.labels;
 
-def determineOptimalThreshold(groundTmean, groundFmean):
-	f = 0
-	best_TP = -1;
-	best_FP = -1;
-	best_TN = -1;
-	best_FN = -1;
-	best_thresh = 0
-	for t in np.linspace(0.1,.9,81):
-		TP = sum(1 for x in groundTmean if x >= t)
-		FN = len(groundTmean) - TP
-		FP = sum(1 for x in groundFmean if x >= t)
-		TN = len(groundFmean) - FP
-
-		precision = 0;
-		recall = 0;
-
-		if(FP == 0):
-			precision = 1.0
-		else:
-			precision = TP / (TP + FP)
-			
-
-		if(FN == 0):
-			recall = 1.0
-		else:
-			recall = TP / (TP + FN)
-			
-		score = precision * recall;
-		if (score > f):
-			best_TP = TP;
-			best_FP = FP;
-			best_TN = TN;
-			best_FN = FN;
-			best_thresh = t
-			f = score 
-
-	precision = best_TP / (best_TP + best_FP)
-	recall = best_TP / (best_TP + best_FN)
-	print(best_thresh)
-	print("Precision: " +str(precision))
-	print("Recall: " +str(recall))
-
-	return best_thresh
-
-
 def getinput(file_name, Nsamp = 100):
 	(sample_rate, signal) = wavfile.read(file_name)
 
