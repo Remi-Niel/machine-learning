@@ -4,11 +4,15 @@ import sys
 import progressbar
 import numpy as np
 from scipy.io import wavfile
+import scipy
+from matplotlib import mlab
 import math
 import keras
 import random
 from keras.models import load_model
 from keras import backend as K 
+from tensorflow import Session
+import getbatch_binary as getbatch
 
 label_set = [x[1] for x in os.walk("data/")][0]
 label_set = sorted(label_set)
