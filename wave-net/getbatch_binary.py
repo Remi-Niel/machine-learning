@@ -24,7 +24,6 @@ for i in range(NUM_LABELS):
 	NUM_DATAFILES += len(sample_files[i])
 	length_cat.append(len(sample_files[i]))
 
-print(length_cat)
 def num_class():
 	labels = [x[1] for x in os.walk(directory)][0] #['piano','violin']
 
