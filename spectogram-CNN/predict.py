@@ -53,6 +53,14 @@ model = load_model("multi_model/model.model")
 label_set = getbatch.labels;
 
 wav_file = sys.argv[1];
+txt_file=wav_file.replace(".wav",".txt")
+f = open(txt_file,"r")
+
+labels = f.read().splitlines()
+
+
+for i in range(len(labels)):
+	labels[i] = ''.join(labels[i].split())
 
 input = getinput(wav_file)
 
@@ -71,3 +79,4 @@ label = label_set[best]
 print("Recognised instrument: " + label)
 print("Certainty: " + str(best/np.sum(summed)))
 
+print("Contains: " + str(labels))
