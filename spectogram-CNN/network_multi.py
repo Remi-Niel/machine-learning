@@ -21,7 +21,7 @@ input_shape = (TIME_PERIODS*num_sensors)
 
 # 1D CNN neural network
 num_classes = 11 #True/False
-IMSIZE = 32
+IMSIZE = 64
 
 # 1D CNN neural network
 model_m = Sequential()
