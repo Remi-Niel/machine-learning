@@ -21,7 +21,7 @@ input_shape = (TIME_PERIODS*num_sensors)
 
 # 1D CNN neural network
 num_classes = 11 #True/False
-IMSIZE = 128
+IMSIZE = 32
 
 # 1D CNN neural network
 model_m = Sequential()
@@ -88,4 +88,4 @@ print("Loss on test data: %0.4f" % score[0])
 f.write("\nAccuracy on test data: %0.4f" % score[1])
 f.write("\nLoss on test data: %0.4f" % score[0])
 
-model_m.save("multi_model/model.model")
+model_m.save("multi_model/model2.model")

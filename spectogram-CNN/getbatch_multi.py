@@ -12,7 +12,7 @@ import sys
 
 
 directory = 'data/'
-IMSIZE = 128
+IMSIZE = 32
 
 labels = [x[1] for x in os.walk(directory)][0] #['piano','violin']
 labels = sorted(labels)     #consistend label numbers 
