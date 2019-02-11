@@ -60,7 +60,6 @@ def determineOptimalThreshold(groundTmean, groundFmean):
 	print(best_thresh)
 	print("Precision: " +str(precision))
 	print("Recall: " +str(recall))
-	print("F1: " + str(2*(precision*recall)/(precision+recall)))
 
 	return best_thresh
 
