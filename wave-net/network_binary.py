@@ -45,7 +45,7 @@ print(model_m.summary())
 # %%
 print("\n--- Fit the model ---\n")
 
-for CLASS in progressbar.progressbar(range(11)):
+for CLASS in progressbar.progressbar(range(1)):
     print("\nClass: " + getbatch.labels[CLASS])	
     # The EarlyStopping callback monitors training accuracy:
     # if it fails to improve for ten consecutive epochs,
