@@ -10,7 +10,7 @@ from keras.utils import np_utils
 
 import getbatch_binary as getbatch
 
-f= open("log","a+",1)
+f= open("normalizations_log","a+",1)
 f.write("\n")
 f.write("\n")
 f.write("Network_binary")
@@ -81,4 +81,4 @@ for CLASS in progressbar.progressbar(range(11)):
     f.write("\nAccuracy on test data: %0.4f" % score[1])
     f.write("\nLoss on test data: %0.4f" % score[0])
 
-    model_m.save("models/"+getbatch.labels[CLASS]+".model")
+    #model_m.save("models/"+getbatch.labels[CLASS]+".model")
