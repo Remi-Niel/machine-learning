@@ -65,12 +65,12 @@ def getBatch(t, size = 100, train = True):
 		tmp = random.randint(0, len(signal)-44100 - 1)
 		mono = mono[tmp:tmp+44100]
 
-		mean = np.mean(mono)
-		stddev = np.std(mono)
-		if stddev == 0:
-			stddev = 1
+		min_val = np.amin(mono)
+		max_val = np.amax(mono)
 
-		mono = (mono - mean) / stddev
+		mono = mono - min;
+		mono = mono / (max - min); 	#between [0,1]
+		mono = 1 - (2 * mono);		#between [-1,1]
 
 		data[i,:] = mono
 
