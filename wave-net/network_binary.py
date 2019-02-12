@@ -51,7 +51,7 @@ for CLASS in progressbar.progressbar(range(11)):
     # if it fails to improve for ten consecutive epochs,
     # training stops early
     callbacks_list = [
-        keras.callbacks.EarlyStopping(monitor='val_acc', patience=20, restore_best_weights = True, verbose = 1),
+        keras.callbacks.EarlyStopping(monitor='val_acc', patience=2, restore_best_weights = True, verbose = 1),
 	keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=5, min_lr=0.000001)
     ]
 
