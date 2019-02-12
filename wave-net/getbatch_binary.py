@@ -68,9 +68,9 @@ def getBatch(t, size = 100, train = True):
 		min_val = np.amin(mono)
 		max_val = np.amax(mono)
 
-		mono = mono - min_val;
-		mono = mono / (max_val - min_val); 	#between [0,1]
-		mono = 1 - (2 * mono);		#between [-1,1]
+		#mono = mono - min_val;
+		#mono = mono / (max_val - min_val); 	#between [0,1]
+		#mono = 1 - (2 * mono);		#between [-1,1]
 
 		data[i,:] = mono
 
