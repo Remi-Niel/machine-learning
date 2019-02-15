@@ -77,27 +77,6 @@ def getinput(file_name, Nsamp = 5):
 	
 	return inputs
 
-# def getinput(file_name, nSamp = 100):
-# 	(sample_rate, signal) = wavfile.read(file_name)
-# 	mono = signal.sum(axis = 1) / 2
-
-# 	mean = np.mean(mono) # is about zero
-# 	stddev = np.std(mono)
-# 	if stddev == 0:
-# 		stddev = 1
-
-# 	mono = (mono - mean) / stddev
-
-# 	inputs = np.zeros((nSamp,44100))
-
-# 	for i in range(nSamp):
-# 		tmp = random.randint(0, len(mono)-44100 - 1)
-# 		sample = mono[tmp:tmp+44100]
-# 		#sample = mono[i*44100:(i + 1)*44100]
-# 		inputs[i,:] = sample
-	
-# 	return inputs
-
 directory = 'testing/'
 
 sample_files = glob.glob("testing/*.wav", recursive = True)
@@ -159,8 +138,7 @@ for m in range(len(model_files)):
 			sumF += mean
 			Fcount += 1
 			meanFalse.append(mean)
-		#	print(mean)
-
+			
 		correct = (prediction == ground_truth)
 
 		if correct:
@@ -173,20 +151,12 @@ for m in range(len(model_files)):
 				FP+=1
 			else:
 				FN+=1
-	# print(TP)
-	# print(FP)
-	# print(TN)
-	# print(FN)
 
 	print(sumG/Gcount)
 	print(sumF/Fcount)
 
 	print(label)
 	determineOptimalThreshold(meanGround,meanFalse)
-	# precision = TP / (TP + FP)
-	# recall = TP / (TP + FN)
-	# print("Precision: " +str(precision))
-	# print("Recall: " +str(recall))
 
 
 
