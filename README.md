@@ -6,7 +6,7 @@ python3
 
 and the following python packages:
 
-tensorflow
+tensorflow<br>
 opencv-python
 keras
 matplotlib
