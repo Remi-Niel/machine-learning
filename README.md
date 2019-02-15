@@ -7,6 +7,6 @@ To train the networks run network_multi.py or network_binary.py from the termina
 trained models will be stored in a models folder.
 
 Testing:
-To test the networks run multi_test.py (test performance when recognizing all instruments), single_test.py (test performance when returning 1 instrument) from the terminal in either 1d-conv or spectogram-CNN.
+To test the networks run multi_test.py (test performance when recognizing all instruments), single_test.py (test performance when returning 1 instrument) from the terminal in either 1d-conv or spectogram-CNN. Keep in mind that in case of multi_test.py it returns the precision, recall and F1 scores for every class. However these scores are determined by looking for the optimal threshold and determining the scores there.
 
 
