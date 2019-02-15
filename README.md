@@ -7,11 +7,11 @@ python3
 and the following python packages:
 
 tensorflow<br>
-opencv-python
-keras
-matplotlib
-progressbar2
-scipy
+opencv-python<br>
+keras<br>
+matplotlib<br>
+progressbar2<br>
+scipy<br>
 glob
 
 
